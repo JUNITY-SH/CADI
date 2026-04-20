@@ -1,0 +1,217 @@
+table 'Fact Survey Answer'
+	lineageTag: 7f19201d-1e74-40d6-9d56-3b7ab670b6f6
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: 5e50baf3-e230-4a20-b040-54ad792d4dc3
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Representative Key'
+		dataType: string
+		lineageTag: 3ead971d-7ca8-43bd-8028-921814358555
+		summarizeBy: none
+		sourceColumn: Sales Representative Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mercher Key'
+		dataType: string
+		lineageTag: 9a381435-7e2e-4053-be58-fc8741b3c61c
+		summarizeBy: none
+		sourceColumn: Mercher Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Answer
+		dataType: string
+		lineageTag: b67a066c-0052-4fe6-a363-dff3d4777f42
+		summarizeBy: none
+		sourceColumn: Answer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calendar Key'
+		dataType: string
+		lineageTag: 9978e1d8-7ff0-4fa5-9676-93112862a069
+		summarizeBy: none
+		sourceColumn: Calendar Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: 2a0470a2-a30e-4be7-b049-6a99c1ce9366
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey Key'
+		dataType: string
+		lineageTag: bf6a5ab6-363d-4acb-ae14-0b0ed58d3622
+		summarizeBy: none
+		sourceColumn: Survey Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question Key'
+		dataType: string
+		lineageTag: 831a5b43-141f-47ec-a73a-94c1971b7687
+		summarizeBy: none
+		sourceColumn: Question Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Submission Date'
+		dataType: int64
+		formatString: 0
+		lineageTag: 42e7461c-6923-4ba0-9ac7-07d87aab384a
+		summarizeBy: sum
+		sourceColumn: Submission Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Submission ID'
+		dataType: string
+		lineageTag: 04742628-8da0-4a9c-8027-4374895d9cb2
+		summarizeBy: none
+		sourceColumn: Submission ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Submission Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8c9ededf-52e7-470d-8774-9d34a0ad2c2e
+		summarizeBy: none
+		sourceColumn: Submission Datetime
+
+		variation Variation
+			isDefault
+			relationship: eb20b0d5-2873-4354-a1d9-9adea5aeda4e
+			defaultHierarchy: LocalDateTable_02c99bfc-6bb0-46e8-b21a-d374bc653337.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Id'
+		dataType: string
+		lineageTag: e2c3b00a-cac6-40f2-a855-666badd3f1ae
+		summarizeBy: none
+		sourceColumn: Event Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: int64
+		formatString: 0
+		lineageTag: 884dd697-9e6d-421b-80c9-ca119bf0ea0b
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+	column Score
+		dataType: int64
+		formatString: 0
+		lineageTag: 91398379-818c-4045-aa40-7cd68878927d
+		summarizeBy: sum
+		sourceColumn: Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'User Email Address'
+		dataType: string
+		lineageTag: a9aaa17b-e80b-40e4-8b6d-41f5afe207ce
+		summarizeBy: none
+		sourceColumn: User Email Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6cbc57c6-e8ce-47b1-9c4c-2e745a44ce15
+		summarizeBy: none
+		sourceColumn: Modified At
+
+		variation Variation
+			isDefault
+			relationship: 5bc79670-36e9-4f45-8a89-533af6f242fa
+			defaultHierarchy: LocalDateTable_11729720-c05c-4f38-97ac-dd23430ba2d2.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e7cfa01a-2ebc-4c91-8165-e3d951086dc9
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: e4e5dd16-5aa5-48a4-b69d-012bc2c6a59e
+			defaultHierarchy: LocalDateTable_4b1d689a-6720-483a-9ae6-6370829ac966.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created By'
+		dataType: string
+		lineageTag: 7a0e6aa1-6cf7-4aa6-b096-959a54159e66
+		summarizeBy: none
+		sourceColumn: Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified By'
+		dataType: string
+		lineageTag: ef132fc8-bac1-4f00-8c64-73d6333baa07
+		summarizeBy: none
+		sourceColumn: Modified By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Answer Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 44eeb704-2d59-4e42-b093-0a1c11884996
+		summarizeBy: none
+		sourceColumn: Answer Date
+
+		variation Variation
+			isDefault
+			relationship: 9178e2bc-d7af-499a-b9b2-a9460d7dcabd
+			defaultHierarchy: LocalDateTable_3d47f325-b106-458d-adb6-03abab473bd4.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Survey Answer Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 391c5361-953c-4bd4-889e-ce7358db3c6d
+		summarizeBy: count
+		sourceColumn: Survey Answer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Survey Answer' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Fact Survey Answer_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Fact Survey Answer",version=""]}[Data]
+				in
+				    #"Fact Survey Answer_"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

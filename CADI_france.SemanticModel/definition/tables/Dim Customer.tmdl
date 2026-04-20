@@ -1,0 +1,506 @@
+table 'Dim Customer'
+	lineageTag: 6fe4d81a-a48d-4fed-ba47-5928eef3f559
+
+	column 'Old Customer Key'
+		dataType: string
+		lineageTag: 548b5b4e-e14c-4d60-b3f2-ae8ff8226fb5
+		summarizeBy: none
+		sourceColumn: Old Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Old Customer Id'
+		dataType: string
+		lineageTag: 67010c0d-79c5-4558-8061-bb60830737f9
+		summarizeBy: none
+		sourceColumn: Old Customer Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Active'
+		dataType: int64
+		formatString: 0
+		lineageTag: 68abf183-95b6-4b20-bae2-6c93ae075f35
+		summarizeBy: sum
+		sourceColumn: Is Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5fbbba22-c421-443a-a647-e0ed0e3566eb
+		summarizeBy: none
+		sourceColumn: Start Date
+
+		variation Variation
+			isDefault
+			relationship: 86e644d9-4aed-4091-8a7f-56cf7feaaf1a
+			defaultHierarchy: LocalDateTable_28ec7075-3b98-4c36-a58b-1222481e7da7.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End Date'
+		dataType: string
+		lineageTag: 58aa0cf3-9c75-487f-a985-e18ee0eda138
+		summarizeBy: none
+		sourceColumn: End Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Number'
+		dataType: string
+		lineageTag: a6a1dfcd-f6cf-4bac-8dca-71a4c6d872a8
+		summarizeBy: none
+		sourceColumn: Customer Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer
+		dataType: string
+		lineageTag: 7a5c4d9d-945f-4f89-bdeb-65e7eb09201c
+		summarizeBy: none
+		sourceColumn: Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Code'
+		dataType: string
+		lineageTag: 035be58d-686f-435e-800e-83fd9644246e
+		summarizeBy: none
+		sourceColumn: Sales Organization Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Legal Name'
+		dataType: string
+		lineageTag: d8f8ff5b-c3f1-4b4d-a9b6-aa92f78f17d6
+		summarizeBy: none
+		sourceColumn: Customer Legal Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Status'
+		dataType: string
+		lineageTag: cae55e84-b9fd-4722-b314-9ec05e9be6b2
+		summarizeBy: none
+		sourceColumn: Customer Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Group'
+		dataType: string
+		lineageTag: 86c73b9c-6c9f-42a0-a616-75419da71ddd
+		summarizeBy: none
+		sourceColumn: Customer Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales District'
+		dataType: string
+		lineageTag: af299be9-ee8f-418d-ac69-931e1fdc8b47
+		summarizeBy: none
+		sourceColumn: Sales District
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'License Class'
+		dataType: string
+		lineageTag: 9f653f59-4064-4f30-a16b-dc49b85bf360
+		summarizeBy: none
+		sourceColumn: License Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 25083c4b-74ef-44d4-8634-f35b7d2bfc6d
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 094df5f7-2407-4395-88b9-523fa4baf078
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 5674eeab-f9e1-4a6f-be80-7f029ec5c688
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Street
+		dataType: string
+		lineageTag: 0f2ed3e2-e757-4fc1-aab0-15a26a7060f2
+		summarizeBy: none
+		sourceColumn: Street
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'House Number'
+		dataType: string
+		lineageTag: 47f7efea-5d07-4f2f-834d-5581ed0f88b0
+		summarizeBy: none
+		sourceColumn: House Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: string
+		lineageTag: 956385fe-fc00-411c-97a3-9f282a7abffd
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: string
+		lineageTag: 91ce2b45-1054-4516-990b-42c1269fa889
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classification Code'
+		dataType: string
+		lineageTag: 08608984-e62b-4f58-a8af-034af7c7c742
+		summarizeBy: none
+		sourceColumn: Classification Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classification Description'
+		dataType: string
+		lineageTag: 7a5844b4-dfeb-42af-afdf-d9e4636fc7d4
+		summarizeBy: none
+		sourceColumn: Classification Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Office Code'
+		dataType: string
+		lineageTag: 400bfa67-2a8a-4ec6-be32-e57e0fcc88d5
+		summarizeBy: none
+		sourceColumn: Sales Office Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Office'
+		dataType: string
+		lineageTag: 7bb30fee-e9e7-4a3a-90f7-e1bfa5c352d7
+		summarizeBy: none
+		sourceColumn: Sales Office
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 1 Code'
+		dataType: string
+		lineageTag: ac062f3a-4ecf-42c0-8abf-35c5493a5efc
+		summarizeBy: none
+		sourceColumn: Trade Channel 1 Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 1 Description'
+		dataType: string
+		lineageTag: 8b0f4ac4-b43b-4946-9a26-3916dcf8eede
+		summarizeBy: none
+		sourceColumn: Trade Channel 1 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 2 Code'
+		dataType: string
+		lineageTag: ddcd6816-d9ce-4a4e-b260-127bf4928635
+		summarizeBy: none
+		sourceColumn: Trade Channel 2 Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 2 Description'
+		dataType: string
+		lineageTag: 669341a7-ce6d-4190-a19e-cbc50608f896
+		summarizeBy: none
+		sourceColumn: Trade Channel 2 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 3 Code'
+		dataType: string
+		lineageTag: 7984d23e-4190-478c-8433-3a264b791b5f
+		summarizeBy: none
+		sourceColumn: Trade Channel 3 Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 3 Description'
+		dataType: string
+		lineageTag: 29e7f84a-73f5-48a3-a0c0-c5be06542f68
+		summarizeBy: none
+		sourceColumn: Trade Channel 3 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 4 Code'
+		dataType: string
+		lineageTag: 0fbdbc7d-8357-423d-8c0c-ab0f55c2c46d
+		summarizeBy: none
+		sourceColumn: Trade Channel 4 Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel 4 Description'
+		dataType: string
+		lineageTag: 566d243a-ff81-42cc-aa60-083b694dd67b
+		summarizeBy: none
+		sourceColumn: Trade Channel 4 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mission
+		dataType: string
+		lineageTag: 2f4b569a-e3c5-422f-b86b-a1a75d747851
+		summarizeBy: none
+		sourceColumn: Mission
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Outlet Definition'
+		dataType: string
+		lineageTag: 5723ca43-bc4a-4355-a235-cf829a4a021c
+		summarizeBy: none
+		sourceColumn: Outlet Definition
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Outlet Image'
+		dataType: string
+		lineageTag: 6fe3ef04-c1c3-49eb-a202-51318a7e2433
+		summarizeBy: none
+		sourceColumn: Outlet Image
+
+		annotation SummarizationSetBy = Automatic
+
+	column Volume
+		dataType: string
+		lineageTag: 69d0fc93-603d-479e-97b3-fbdb091e2d02
+		summarizeBy: none
+		sourceColumn: Volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Logistics Class'
+		dataType: string
+		lineageTag: 7a030f8a-eddf-42e6-a9db-e4d80f815bff
+		summarizeBy: none
+		sourceColumn: Logistics Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visits Per Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: d253a3c7-ced1-42be-a0d0-a5e68f2d1c3b
+		summarizeBy: sum
+		sourceColumn: Visits Per Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Season
+		dataType: string
+		lineageTag: f156d8e8-0b0b-4f60-91a5-e57694b39904
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 3c6a46a4-b1ba-4dc9-a103-1f0279406407
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 4c5bf5ea-3fcd-445c-9b5d-78d4b0a1cfbe
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contact Name'
+		dataType: string
+		lineageTag: 0a7d91bf-b7d0-4f73-b17b-8c0eb73193ff
+		summarizeBy: none
+		sourceColumn: Contact Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contact Email'
+		dataType: string
+		lineageTag: 238bb6dd-b14d-48b4-8d6a-59d58c819fd3
+		summarizeBy: none
+		sourceColumn: Contact Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mobile Phone'
+		dataType: string
+		lineageTag: 1540dc45-2f3b-469b-920d-523fc642643d
+		summarizeBy: none
+		sourceColumn: Mobile Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mobile Contact Name'
+		dataType: string
+		lineageTag: 82186654-ed42-4d6c-bed8-d6fc307e858c
+		summarizeBy: none
+		sourceColumn: Mobile Contact Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Crm Contact Id'
+		dataType: string
+		lineageTag: f8c71c4e-7d60-46f3-b6c7-230466bb293f
+		summarizeBy: none
+		sourceColumn: Crm Contact Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Organization Number'
+		dataType: string
+		lineageTag: 0fdcfe03-1767-4ea1-8e23-8ca028d22dec
+		summarizeBy: none
+		sourceColumn: Organization Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain 1'
+		dataType: string
+		lineageTag: fd21d09f-eb69-4150-84f6-0b820c188df8
+		summarizeBy: none
+		sourceColumn: Chain 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain 2'
+		dataType: string
+		lineageTag: 3413b641-ecae-4fa8-a329-74779b2b9fe5
+		summarizeBy: none
+		sourceColumn: Chain 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain 3'
+		dataType: string
+		lineageTag: 3e58ce5a-fca0-481d-a39f-3b0ff979686b
+		summarizeBy: none
+		sourceColumn: Chain 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain 4'
+		dataType: string
+		lineageTag: 25045888-a8a5-4742-b62d-263b0bdd1f68
+		summarizeBy: none
+		sourceColumn: Chain 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Group Code'
+		dataType: string
+		lineageTag: a3b27bba-5f4b-474c-b6a5-59239e680b08
+		summarizeBy: none
+		sourceColumn: Account Group Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Group Code'
+		dataType: string
+		lineageTag: caadd4a4-bc70-4192-8731-f0f016f99fd4
+		summarizeBy: none
+		sourceColumn: Sales Group Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Support'
+		dataType: string
+		lineageTag: 2e7f5778-2c9f-423b-91c4-09ec9985829a
+		summarizeBy: none
+		sourceColumn: Customer Support
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer ID'
+		dataType: string
+		lineageTag: e445006c-6ffc-442f-9978-8f2c59c83c86
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: 8e140f48-cd35-4ae9-8ee3-5a54d0ad0f5c
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mercher Id'
+		dataType: string
+		lineageTag: 2a51eb0f-5fab-411b-baf1-fcb89f67050f
+		summarizeBy: none
+		sourceColumn: Mercher Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 055f6911-452c-4532-a085-186da3395aeb
+		summarizeBy: count
+		sourceColumn: Sales Rep Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Agreed'
+		dataType: int64
+		formatString: 0
+		lineageTag: c47e7ae9-22be-434c-acbb-a40ac2210155
+		summarizeBy: sum
+		sourceColumn: Event Agreed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 64bc53c5-6fa0-4c95-a987-691149cd278f
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Customer' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Customer_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Customer",version=""]}[Data]
+				in
+				    #"Dim Customer_"
+

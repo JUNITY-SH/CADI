@@ -1,0 +1,91 @@
+table 'Dim Mercher'
+	lineageTag: cc9241e4-3e4b-4de9-b5ea-f1081c1cf47a
+
+	column 'Mercher Key'
+		dataType: string
+		lineageTag: cd6a3476-0476-48d0-815a-7771eec59f29
+		summarizeBy: none
+		sourceColumn: Mercher Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mercher Id'
+		dataType: string
+		lineageTag: 22146561-2bba-4cca-a840-d27d8d051db2
+		summarizeBy: none
+		sourceColumn: Mercher Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org Code'
+		dataType: string
+		lineageTag: 12e2c579-cd2a-427b-8272-1b0fe9e5660f
+		summarizeBy: none
+		sourceColumn: Sales Org Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'First Name'
+		dataType: string
+		lineageTag: fdfedf3c-de41-44c8-8703-758e38cc3811
+		summarizeBy: none
+		sourceColumn: First Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Name'
+		dataType: string
+		lineageTag: 3fbca649-d149-4f8e-9fcb-5cc99ab55986
+		summarizeBy: none
+		sourceColumn: Last Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mercher Name'
+		dataType: string
+		lineageTag: 75bda6ee-c4ae-43c0-b47d-d5c424cdd275
+		summarizeBy: none
+		sourceColumn: Mercher Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e952a0b-6a7a-4860-b093-10379583b805
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: 31cdc0b7-851b-4e1b-a71a-379c49599719
+			defaultHierarchy: LocalDateTable_3bf0c5f0-c203-43dd-8b3b-ab2b2b84424b.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c2c27a99-5e32-4f4b-a01f-7e928ece384a
+		summarizeBy: none
+		sourceColumn: Modified At
+
+		variation Variation
+			isDefault
+			relationship: 52defd62-ceb0-4b1f-bd31-78cce3ca7421
+			defaultHierarchy: LocalDateTable_5cda81a5-afb5-40e9-9c0c-27e5ba72af74.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Mercher' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Mercher_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Mercher",version=""]}[Data]
+				in
+				    #"Dim Mercher_"
+

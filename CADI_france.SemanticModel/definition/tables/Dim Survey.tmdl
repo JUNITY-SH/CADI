@@ -1,0 +1,145 @@
+table 'Dim Survey'
+	lineageTag: bc8a8cf6-84d4-46e1-a217-c055f5a34350
+
+	column 'Survey Key'
+		dataType: string
+		lineageTag: 6d2f5da8-7b24-47ef-b1d9-2783b7c1d604
+		summarizeBy: none
+		sourceColumn: Survey Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey ID'
+		dataType: string
+		lineageTag: 422b64b4-e8ae-4f36-b27a-813e4bc39e44
+		summarizeBy: none
+		sourceColumn: Survey ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurveyName
+		dataType: string
+		lineageTag: 011a1124-ba44-4b46-91b9-0e1acf17b5d6
+		summarizeBy: none
+		sourceColumn: SurveyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Survey
+		dataType: string
+		lineageTag: 947f98c9-8e72-4743-b721-d873e5cfdc1f
+		summarizeBy: none
+		sourceColumn: Survey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey Created Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3b947234-49b9-4d6f-8799-4bdf809533db
+		summarizeBy: none
+		sourceColumn: Survey Created Date
+
+		variation Variation
+			isDefault
+			relationship: ab996bbb-131d-4b31-9249-e9fcf635f3b8
+			defaultHierarchy: LocalDateTable_af2bab26-5f49-4f02-941d-4f0406a7c33c.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6514e3e1-438e-4796-9248-e8e5a92d7ef9
+		summarizeBy: none
+		sourceColumn: Start Date
+
+		variation Variation
+			isDefault
+			relationship: b1e0a7d0-9e22-4da9-b2ae-8acd6b47edb6
+			defaultHierarchy: LocalDateTable_bb1d0828-2ff8-427e-b838-63a429f69727.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9dc842cc-385f-4b6f-9a71-b5e15667b59b
+		summarizeBy: none
+		sourceColumn: End Date
+
+		variation Variation
+			isDefault
+			relationship: 5958be46-b356-4556-beaf-4732ad3591ff
+			defaultHierarchy: LocalDateTable_311a9a8c-2b47-4080-bb48-e7d9ada99825.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey Latest Submission Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 11e0bde6-e8c0-47f7-9a29-d0cd8bcdb033
+		summarizeBy: none
+		sourceColumn: Survey Latest Submission Date
+
+		variation Variation
+			isDefault
+			relationship: 4998501a-27e9-41d9-a2dd-a21312df7aa5
+			defaultHierarchy: LocalDateTable_619a4fa4-68e9-4c71-bf8c-379335fc7418.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mandatory
+		dataType: int64
+		formatString: 0
+		lineageTag: a575be6e-6162-4ac0-84c3-e01632ff3acb
+		summarizeBy: sum
+		sourceColumn: Mandatory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 9c29c691-37c3-4345-982b-9aedc0b6f48f
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey Type'
+		dataType: string
+		lineageTag: 1b184e8c-b220-4115-8f13-d3b024e3128b
+		summarizeBy: none
+		sourceColumn: Survey Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Code'
+		dataType: string
+		lineageTag: f3c678a8-b7be-4fd7-a8d2-bd993f62c5d8
+		summarizeBy: none
+		sourceColumn: Sales Organization Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 567087b7-509a-4f0e-a9b4-8c58b892b5a3
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Survey' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Survey_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Survey",version=""]}[Data]
+				in
+				    #"Dim Survey_"
+

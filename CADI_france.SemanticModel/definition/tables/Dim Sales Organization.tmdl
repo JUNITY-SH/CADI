@@ -1,0 +1,80 @@
+table 'Dim Sales Organization'
+	lineageTag: 2aa2d5b2-2003-4169-ba33-94712e9c5b8c
+
+	column 'Sales Organization Code'
+		dataType: string
+		lineageTag: 801f7851-6a8f-4712-8c12-ab1fa6a5b947
+		summarizeBy: none
+		sourceColumn: Sales Organization Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Name'
+		dataType: string
+		lineageTag: 19cba83c-0a80-4c2d-9c58-b33a9c3daabf
+		summarizeBy: none
+		sourceColumn: Sales Organization Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Country'
+		dataType: string
+		lineageTag: c5bbb66e-4124-42c4-91bf-4e3d6d75ee9f
+		summarizeBy: none
+		sourceColumn: Sales Organization Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Old Sales Organization Key'
+		dataType: string
+		lineageTag: 075f6b10-7eeb-4d4c-a305-99cc5755077f
+		summarizeBy: none
+		sourceColumn: Old Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: d959928d-f921-4b7d-85b0-7300ed42f821
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Description'
+		dataType: string
+		lineageTag: 82a8d351-1430-4d4e-ab12-857195622089
+		summarizeBy: none
+		sourceColumn: Country Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flag
+		dataType: string
+		lineageTag: 8702a690-cdf8-4455-8485-069c0b0afa9d
+		summarizeBy: none
+		sourceColumn: Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: b0eb85bc-2b91-46e5-98c9-bd4f55b912e8
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Sales Organization' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Sales Organization_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Sales Organization",version=""]}[Data]
+				in
+				    #"Dim Sales Organization_"
+

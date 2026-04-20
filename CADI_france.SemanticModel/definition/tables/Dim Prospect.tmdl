@@ -1,0 +1,367 @@
+table 'Dim Prospect'
+	lineageTag: 34a6b7e0-7054-44c6-a31d-038edb300a50
+
+	column 'Prospect Key'
+		dataType: string
+		lineageTag: aa917255-47b3-4e02-90be-cf28f271fc8f
+		summarizeBy: none
+		sourceColumn: Prospect Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prospect Id'
+		dataType: string
+		lineageTag: 5d2a595b-b424-4652-a947-9cbb0f85a15b
+		summarizeBy: none
+		sourceColumn: Prospect Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org Code'
+		dataType: string
+		lineageTag: ea3d01bf-6481-475f-b88e-70e20e8bdd1c
+		summarizeBy: none
+		sourceColumn: Sales Org Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1dd68245-4fce-4b2e-9786-d35d9e8c5d8b
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: 1d821854-412d-45b9-9220-6732e78e31ce
+			defaultHierarchy: LocalDateTable_5b940e60-85fb-417c-98f3-53a58e2ad26b.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prospect Name'
+		dataType: string
+		lineageTag: 26468057-5d01-4616-9829-9f9f3829b2f3
+		summarizeBy: none
+		sourceColumn: Prospect Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 79a9c926-bcfc-4ba1-a829-ae405655e42a
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vat
+		dataType: string
+		lineageTag: 0149f2f3-a86b-4c26-8b3f-f9edc15a2c98
+		summarizeBy: none
+		sourceColumn: Vat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: a623200e-2d76-4775-a130-f92116bb84ca
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 42abf732-3b3c-4d00-a4dd-7cb147f8a65b
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: ec040706-14cb-445b-a580-d05c051a36cf
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 692ad3b0-c846-4f00-a017-28c35c4fcadf
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 522a1482-0fd5-4958-98d3-72c3983ca68d
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prospect Value'
+		dataType: string
+		lineageTag: 27415f8d-00db-40d9-985c-ec74cb3aff2a
+		summarizeBy: none
+		sourceColumn: Prospect Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prospect Classification'
+		dataType: string
+		lineageTag: 93118e3f-1ac7-4dfd-9ab7-489a6f03de6f
+		summarizeBy: none
+		sourceColumn: Prospect Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trade Channel'
+		dataType: string
+		lineageTag: f5251927-ced3-4146-85e6-804667a7871b
+		summarizeBy: none
+		sourceColumn: Trade Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estimated Volume'
+		dataType: string
+		lineageTag: 0dbbe348-21f3-480a-93e6-2045f162c1f5
+		summarizeBy: none
+		sourceColumn: Estimated Volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Legal Name'
+		dataType: string
+		lineageTag: 2f79a02b-3a29-4e94-9d56-a10d45eb1159
+		summarizeBy: none
+		sourceColumn: Legal Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adress2
+		dataType: string
+		lineageTag: c7413ebd-dfed-4a08-8851-d45f6d1a7dba
+		summarizeBy: none
+		sourceColumn: Adress2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adress3
+		dataType: string
+		lineageTag: a40f99fe-fa01-4a44-b088-8c2eacb2a606
+		summarizeBy: none
+		sourceColumn: Adress3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region1
+		dataType: string
+		lineageTag: b9f8380d-b5a2-4e8c-89d4-fd7ccc5f69e1
+		summarizeBy: none
+		sourceColumn: Region1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region2
+		dataType: string
+		lineageTag: 7e03c604-1d73-4133-9095-4477283eabc7
+		summarizeBy: none
+		sourceColumn: Region2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region3
+		dataType: string
+		lineageTag: 68da3641-abf0-465d-8625-84d6e7cc4ddf
+		summarizeBy: none
+		sourceColumn: Region3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region4
+		dataType: string
+		lineageTag: 8ef067e0-34d8-405a-8fa3-db1f76f45443
+		summarizeBy: none
+		sourceColumn: Region4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Number'
+		dataType: string
+		lineageTag: 2a87ec6f-c086-4d0e-80d7-9f96f327c8a0
+		summarizeBy: none
+		sourceColumn: Business Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Located At'
+		dataType: string
+		lineageTag: 18ef8c82-1c0d-4f6d-bae1-3a67d34a06fa
+		summarizeBy: none
+		sourceColumn: Located At
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain Id'
+		dataType: string
+		lineageTag: 2c245696-679d-4eea-a89a-d0cc34683e40
+		summarizeBy: none
+		sourceColumn: Chain Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chain Name'
+		dataType: string
+		lineageTag: 33be1014-5e81-493e-98c2-446bdd4113fa
+		summarizeBy: none
+		sourceColumn: Chain Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: f845d65f-dbc8-40af-9d63-c01a7c74604c
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Detailed Market Segment'
+		dataType: string
+		lineageTag: 6149db47-bd24-48af-b795-96dc717364b3
+		summarizeBy: none
+		sourceColumn: Detailed Market Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Menu Type'
+		dataType: string
+		lineageTag: 4c4a554d-e8b3-4768-beb9-a51bda74062d
+		summarizeBy: none
+		sourceColumn: Menu Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nb Of Rooms'
+		dataType: string
+		lineageTag: 2b8ee76d-0385-49a5-b838-983b9fd7abd7
+		summarizeBy: none
+		sourceColumn: Nb Of Rooms
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual Sales'
+		dataType: string
+		lineageTag: 7137640b-6b11-4c46-8306-fc5bf20fd7fa
+		summarizeBy: none
+		sourceColumn: Annual Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Years In Business'
+		dataType: string
+		lineageTag: b9751a2d-f074-4363-a9ef-d44b4769b84e
+		summarizeBy: none
+		sourceColumn: Years In Business
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nb Of Employees'
+		dataType: string
+		lineageTag: 80c89049-b0bc-4b2a-adda-43b726b92848
+		summarizeBy: none
+		sourceColumn: Nb Of Employees
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nb Of Meals Day'
+		dataType: string
+		lineageTag: 7e127a1c-aad1-4f0f-8a54-afc9b1d89526
+		summarizeBy: none
+		sourceColumn: Nb Of Meals Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Average Check'
+		dataType: string
+		lineageTag: d94b82bd-1306-48ab-a3f0-cb9e39598e16
+		summarizeBy: none
+		sourceColumn: Average Check
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Confidence Level'
+		dataType: string
+		lineageTag: 9c6e5b9e-24e1-4281-80ac-c59768f13724
+		summarizeBy: none
+		sourceColumn: Confidence Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Score Purchasing Potential'
+		dataType: string
+		lineageTag: f0ea122a-2c4f-4874-b149-c71d3e86ca35
+		summarizeBy: none
+		sourceColumn: Score Purchasing Potential
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Score Area Potential'
+		dataType: string
+		lineageTag: 0599174b-0891-4004-b618-2779b995e85b
+		summarizeBy: none
+		sourceColumn: Score Area Potential
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Score Popularity'
+		dataType: string
+		lineageTag: 8a7f4505-fe7a-4b93-98c8-f54b1a92357d
+		summarizeBy: none
+		sourceColumn: Score Popularity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Lead Score'
+		dataType: string
+		lineageTag: b6faa3e8-0ac5-43d8-b6cd-438fd0ec4517
+		summarizeBy: none
+		sourceColumn: Total Lead Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Beer Potential Year'
+		dataType: string
+		lineageTag: 92477c69-7b2c-4d01-a5c9-d2e8046f75b2
+		summarizeBy: none
+		sourceColumn: Beer Potential Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 27aee654-5432-43b9-9b3b-2e781eeb561f
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Prospect' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Prospect_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Prospect",version=""]}[Data]
+				in
+				    #"Dim Prospect_"
+
+	annotation PBI_ResultType = Table
+

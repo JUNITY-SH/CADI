@@ -1,0 +1,77 @@
+table 'Dim Notes'
+	lineageTag: 1e3b7315-2b58-4b50-9ab9-962d791744f3
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: 6884692f-ae1c-41bd-bb93-9106556e1d4e
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org Code'
+		dataType: string
+		lineageTag: b3b15a57-0205-4b15-abd7-046161c6b512
+		summarizeBy: none
+		sourceColumn: Sales Org Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8ee8274e-b528-4fea-9b18-2d4cad8ce19e
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: 05d1306e-8ede-49eb-a5fb-5388fa31da7a
+			defaultHierarchy: LocalDateTable_f77f09c8-263b-49e0-bae9-2060490ff5e7.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Note Id'
+		dataType: string
+		lineageTag: 3fddc47b-af03-4bf1-be15-6a58487c3614
+		summarizeBy: none
+		sourceColumn: Note Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Note Title'
+		dataType: string
+		lineageTag: 740f3a13-0bb4-4aeb-8296-e21240f2037a
+		summarizeBy: none
+		sourceColumn: Note Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Content
+		dataType: string
+		lineageTag: 87e57ebd-78fa-478e-a665-ea224c165b82
+		summarizeBy: none
+		sourceColumn: Content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created By'
+		dataType: string
+		lineageTag: 8e8756c6-9afa-43af-8cfb-5fac995ac9d1
+		summarizeBy: none
+		sourceColumn: Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Notes' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Notes_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Notes",version=""]}[Data]
+				in
+				    #"Dim Notes_"
+

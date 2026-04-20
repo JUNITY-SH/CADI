@@ -1,0 +1,275 @@
+table 'Dim Calendar'
+	lineageTag: 93c10a9c-dc56-4a87-9d56-eeff62d72a50
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6bd2ca68-825d-47c8-acc3-54a46a1a5c61
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: b34f226c-f465-4b7a-b953-391194212abf
+			defaultHierarchy: LocalDateTable_21f007aa-a013-4847-bb61-d2ab67a3027b.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Date Key'
+		dataType: string
+		lineageTag: 453cd931-1c6a-4546-9b60-219575325142
+		summarizeBy: none
+		sourceColumn: Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: a6090841-49eb-4a80-8d0b-cfdd84ed0013
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Half Year'
+		dataType: string
+		lineageTag: bf9e68dd-3b9b-49ce-b25c-f8db60639dde
+		summarizeBy: none
+		sourceColumn: Half Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Half Year'
+		dataType: string
+		lineageTag: c430d08f-cfdc-46c4-9d7c-f5db8924f6e2
+		summarizeBy: none
+		sourceColumn: Year Half Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: dc8490bb-45c0-4fa4-a38c-1c9e4e40eb37
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Quarter'
+		dataType: string
+		lineageTag: 684866c9-b2af-47f0-aa0b-5137482bfec6
+		summarizeBy: none
+		sourceColumn: Year Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 79618380-2e0b-4b29-a8cd-d75640230565
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Two Digits'
+		dataType: string
+		lineageTag: a94561a5-a9b7-4dd1-a75a-2221b2301934
+		summarizeBy: none
+		sourceColumn: Month Two Digits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		dataType: string
+		lineageTag: ccbaef92-90f4-4b99-9c0a-2e2d7a1744df
+		summarizeBy: none
+		sourceColumn: Year Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: c70d2196-1472-4a70-96bd-0c6e328f14e9
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name Year Abbreviation'
+		dataType: string
+		lineageTag: 6f16fd1c-4808-48c0-8c01-9c449b4533de
+		summarizeBy: none
+		sourceColumn: Month Name Year Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name Abbreviation'
+		dataType: string
+		lineageTag: 8d4e7cd5-6322-4051-a8f6-001e0bcdfc5a
+		summarizeBy: none
+		sourceColumn: Month Name Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name Year'
+		dataType: string
+		lineageTag: 2764a953-6782-4491-ae65-3de6cc4d4b12
+		summarizeBy: none
+		sourceColumn: Month Name Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Month'
+		dataType: int64
+		formatString: 0
+		lineageTag: cfb8ee3f-aedb-426d-a68c-59d4a15fdf5b
+		summarizeBy: sum
+		sourceColumn: Day of Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d045603-dee9-4a3b-9f30-b8a35ad6a3f1
+		summarizeBy: sum
+		sourceColumn: Day of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a6c5e91-0854-4ab5-842c-65792b92d9c2
+		summarizeBy: sum
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Commencing'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fa35418e-9686-47c3-8ef0-80b4d3606bf8
+		summarizeBy: none
+		sourceColumn: Week Commencing
+
+		variation Variation
+			isDefault
+			relationship: e60e1f4d-cbe2-4961-840b-a4fa4ae61bad
+			defaultHierarchy: LocalDateTable_c2415933-9718-4a4f-a671-a0fee74cc4cd.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Day of Week'
+		dataType: int64
+		formatString: 0
+		lineageTag: ce22cbca-4e60-4562-b40d-f51767ee4486
+		summarizeBy: sum
+		sourceColumn: Day of Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week Name'
+		dataType: string
+		lineageTag: 82126a1e-b208-452f-b100-8eafb546a2f6
+		summarizeBy: none
+		sourceColumn: Day of Week Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week Name Abbreviation'
+		dataType: string
+		lineageTag: b3c427de-983b-47b6-b9cf-d8fc46c56da3
+		summarizeBy: none
+		sourceColumn: Day of Week Name Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ISO Year Week'
+		dataType: int64
+		formatString: 0
+		lineageTag: 647401f0-153f-48e6-af4f-2b03f9cbe353
+		summarizeBy: sum
+		sourceColumn: ISO Year Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Years Offset'
+		dataType: int64
+		formatString: 0
+		lineageTag: 347b67cb-04b5-4eec-aea8-0af870ed974b
+		summarizeBy: sum
+		sourceColumn: Years Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarters Offset'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bf6869d-5bf9-48df-bba7-84a705f1fdff
+		summarizeBy: sum
+		sourceColumn: Quarters Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Months Offset'
+		dataType: int64
+		formatString: 0
+		lineageTag: d8fcbaae-63e5-4086-97e6-7f2da9f5ec04
+		summarizeBy: sum
+		sourceColumn: Months Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Days Offset'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d463988-36f2-4cb8-a066-192fff0e1fcb
+		summarizeBy: sum
+		sourceColumn: Days Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Weekend'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 295b08c4-c072-4fa1-b81a-13347f838f5f
+		summarizeBy: none
+		sourceColumn: Is Weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year/Week
+		dataType: string
+		lineageTag: 4a3db8f0-5612-4cde-ab59-214f069097e3
+		summarizeBy: none
+		sourceColumn: Year/Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Day'
+		dataType: string
+		lineageTag: b9cc093b-31d9-4bd2-a832-f79f2552a8c3
+		summarizeBy: none
+		sourceColumn: Business Day
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Calendar' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Calendar_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Calendar",version=""]}[Data]
+				in
+				    #"Dim Calendar_"
+

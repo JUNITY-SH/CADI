@@ -1,0 +1,88 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Dim Area Products","Dim Area Type","Dim Calendar","Dim Customer","Dim Event Type","Dim Mercher","Dim Notes","Dim Point of Sales","Dim Prospect","Dim Prospect Sales Representative","Dim Sales Organization","Dim Sales Representative","Dim Question","Dim Sub Brand","Dim Survey","Fact Area Management","Fact Events Proposal","Fact Events","Fact Planned Events","Fact Prospect Lifecycle","Fact Survey Answer"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Dim Area Products'
+ref table DateTableTemplate_b160e464-a387-4d32-955b-7aed59a97ae2
+ref table LocalDateTable_3fde3347-3c3e-481a-84a8-3efd72c4d30b
+ref table 'Dim Area Type'
+ref table 'Dim Calendar'
+ref table LocalDateTable_21f007aa-a013-4847-bb61-d2ab67a3027b
+ref table LocalDateTable_c2415933-9718-4a4f-a671-a0fee74cc4cd
+ref table 'Dim Customer'
+ref table LocalDateTable_28ec7075-3b98-4c36-a58b-1222481e7da7
+ref table 'Dim Event Type'
+ref table 'Dim Mercher'
+ref table LocalDateTable_3bf0c5f0-c203-43dd-8b3b-ab2b2b84424b
+ref table LocalDateTable_5cda81a5-afb5-40e9-9c0c-27e5ba72af74
+ref table 'Dim Notes'
+ref table LocalDateTable_f77f09c8-263b-49e0-bae9-2060490ff5e7
+ref table 'Dim Point of Sales'
+ref table 'Dim Prospect'
+ref table LocalDateTable_5b940e60-85fb-417c-98f3-53a58e2ad26b
+ref table 'Dim Prospect Sales Representative'
+ref table 'Dim Sales Organization'
+ref table 'Dim Sales Representative'
+ref table LocalDateTable_01ff86e1-34c5-4182-99d0-3953258a992f
+ref table 'Dim Question'
+ref table 'Dim Sub Brand'
+ref table 'Dim Survey'
+ref table LocalDateTable_af2bab26-5f49-4f02-941d-4f0406a7c33c
+ref table LocalDateTable_bb1d0828-2ff8-427e-b838-63a429f69727
+ref table LocalDateTable_311a9a8c-2b47-4080-bb48-e7d9ada99825
+ref table LocalDateTable_619a4fa4-68e9-4c71-bf8c-379335fc7418
+ref table 'Fact Area Management'
+ref table LocalDateTable_9fc51188-ff5e-46ab-bdc6-afd55cf8ecd9
+ref table LocalDateTable_e3768b0c-c80a-43f6-b1ef-efcb29d6bb0d
+ref table LocalDateTable_ed6ff794-dc89-46b9-8757-1eb80b783141
+ref table LocalDateTable_f8a67a94-f5de-493a-ad8c-e14554c42140
+ref table 'Fact Events Proposal'
+ref table LocalDateTable_551bb7fc-fc83-4de0-8a04-bddebf7140f0
+ref table LocalDateTable_7b59efb2-c371-41f3-9280-dfceb0abe480
+ref table LocalDateTable_74e2a452-3fbc-4700-9d88-0f6e602efeae
+ref table LocalDateTable_e3e28ed9-fad7-4ecc-8536-e66c1f8f6127
+ref table LocalDateTable_5be2016c-2952-4ccd-a56c-5c81f4bfe919
+ref table LocalDateTable_ef8e01c7-176f-4975-b71c-845ebf76bd75
+ref table LocalDateTable_a398de42-cdff-4eb1-a2b5-d99aafe27539
+ref table LocalDateTable_46c212ce-f992-44d9-8079-6004448e8d82
+ref table 'Fact Events'
+ref table LocalDateTable_28e8d948-65f9-4bb6-809f-bf614eacaefa
+ref table LocalDateTable_2a82eac5-0c3b-4403-abe9-41e33419fa56
+ref table LocalDateTable_3821a229-3832-4dc6-b2e0-7864d7f60a96
+ref table LocalDateTable_eaf329f3-b30a-4a69-9936-b881ca68dbc7
+ref table LocalDateTable_e27fb186-af3e-4725-a8dc-95203d0e28b6
+ref table LocalDateTable_25abd722-ef2d-4ca7-8aed-1c27f34801f1
+ref table LocalDateTable_12d61476-178a-41d2-9a8a-5faacbe7d048
+ref table LocalDateTable_9625c961-71c8-446d-bceb-3b3277c692e2
+ref table LocalDateTable_38a19346-57c9-4150-8594-04345575e09a
+ref table LocalDateTable_3695bdad-ff65-4c0d-8fbc-3b2fcea58ab0
+ref table LocalDateTable_809832f6-2093-4646-adb8-93ed7694453a
+ref table LocalDateTable_efca26ec-515d-4d3f-a034-65f9cd95a78f
+ref table LocalDateTable_ad484095-c121-4ea6-9390-94dbb700376e
+ref table 'Fact Planned Events'
+ref table LocalDateTable_76c61e8b-bf37-4b1f-9b1e-e9cb1ea1bea8
+ref table LocalDateTable_dc5bddee-41f7-4726-a97c-85245999b63b
+ref table LocalDateTable_644a555c-ad38-4c2a-b564-1cc68c3f3317
+ref table 'Fact Prospect Lifecycle'
+ref table LocalDateTable_4dd6c5f1-171b-4aee-85a5-2bda328b6e22
+ref table LocalDateTable_fc1932a0-41d0-47df-9eb6-dc84cfb09e51
+ref table LocalDateTable_aadb7b41-b8d7-43dd-b206-628da130d9ee
+ref table LocalDateTable_356e2492-d742-4697-a677-e7946a91a1db
+ref table 'Fact Survey Answer'
+ref table LocalDateTable_02c99bfc-6bb0-46e8-b21a-d374bc653337
+ref table LocalDateTable_11729720-c05c-4f38-97ac-dd23430ba2d2
+ref table LocalDateTable_4b1d689a-6720-483a-9ae6-6370829ac966
+ref table LocalDateTable_3d47f325-b106-458d-adb6-03abab473bd4
+
+ref cultureInfo fr-FR
+

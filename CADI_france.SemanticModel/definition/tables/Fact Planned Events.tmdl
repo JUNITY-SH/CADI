@@ -1,0 +1,317 @@
+table 'Fact Planned Events'
+	lineageTag: 22a8d4e5-d97e-4566-b2cd-8e33272b62bd
+
+	column 'Event Type Key'
+		dataType: string
+		lineageTag: bd47164f-b281-4644-8d81-4f173e7ff9b8
+		summarizeBy: none
+		sourceColumn: Event Type Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Start Date Key'
+		dataType: string
+		lineageTag: a55d6e60-a3c2-4e3f-84c1-8d860de698c4
+		summarizeBy: none
+		sourceColumn: Event Start Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Start Date'
+		dataType: string
+		lineageTag: d2f460ff-510d-4cbf-8fb2-2581e2e7bb1e
+		summarizeBy: none
+		sourceColumn: Event Start Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Start Datetime'
+		dataType: string
+		lineageTag: 7456aa83-01d0-49e5-9ce2-6f221f7531b0
+		summarizeBy: none
+		sourceColumn: Event Start Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event End Date Key'
+		dataType: string
+		lineageTag: 813dd8e0-06d2-4f44-a441-4b2225a2120d
+		summarizeBy: none
+		sourceColumn: Event End Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event End Date'
+		dataType: string
+		lineageTag: df17d00d-4d0b-42c9-b70e-9f02c1a435ac
+		summarizeBy: none
+		sourceColumn: Event End Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event End Datetime'
+		dataType: string
+		lineageTag: 450d1cd8-dea3-4226-a13b-6320a4150d46
+		summarizeBy: none
+		sourceColumn: Event End Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled Start Date Key'
+		dataType: string
+		lineageTag: 3b6533f5-2aa6-4427-b986-77d52ddab45b
+		summarizeBy: none
+		sourceColumn: Scheduled Start Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled Start Date'
+		dataType: string
+		lineageTag: 054dd5f3-9b9b-4031-ad58-0445194f860f
+		summarizeBy: none
+		sourceColumn: Scheduled Start Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled Start Datetime'
+		dataType: string
+		lineageTag: 0f83b081-3e85-4ae2-ba3a-bd8aacb95467
+		summarizeBy: none
+		sourceColumn: Scheduled Start Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled End Date Key'
+		dataType: string
+		lineageTag: 559fcb03-09be-41da-b4c0-0a4db97b9ece
+		summarizeBy: none
+		sourceColumn: Scheduled End Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled End Date'
+		dataType: string
+		lineageTag: 54d02649-138d-4f17-b374-08efcfcfb9f1
+		summarizeBy: none
+		sourceColumn: Scheduled End Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scheduled End Datetime'
+		dataType: string
+		lineageTag: f91e0b2b-b905-4b5d-8600-aebe03c9c70b
+		summarizeBy: none
+		sourceColumn: Scheduled End Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Creation Date Key'
+		dataType: string
+		lineageTag: 43e634ce-abee-4b41-9f08-58dc4e9b9e64
+		summarizeBy: none
+		sourceColumn: Creation Date Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Creation Date'
+		dataType: string
+		lineageTag: aa006580-815f-4194-bacb-1db6e9ce6fcf
+		summarizeBy: none
+		sourceColumn: Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Creation Datetime'
+		dataType: string
+		lineageTag: 2123b793-9e35-4107-bd51-7184f8796865
+		summarizeBy: none
+		sourceColumn: Creation Datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: ac2b696b-6731-4a88-9f8f-ad5599f20bdc
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Representative Key'
+		dataType: string
+		lineageTag: 7c4b3b49-acbc-4c98-ad93-c0f4d80c5b8b
+		summarizeBy: none
+		sourceColumn: Sales Representative Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Duration In Minutes'
+		dataType: double
+		lineageTag: 4098fa3f-b9a7-44a7-99ff-be0731fd455f
+		summarizeBy: sum
+		sourceColumn: Duration In Minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Delay In Minutes'
+		dataType: double
+		lineageTag: 9f2d8d04-0e2e-4561-94df-436206286bc5
+		summarizeBy: sum
+		sourceColumn: Delay In Minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: 04783ce1-49c5-46b4-bed9-081a07db799f
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'User Id'
+		dataType: string
+		lineageTag: 845ef391-b923-4adf-9433-236baddfd8d9
+		summarizeBy: none
+		sourceColumn: User Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Id'
+		dataType: string
+		lineageTag: c045364d-eaa6-456e-9535-8fc375f7a593
+		summarizeBy: none
+		sourceColumn: Event Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Type'
+		dataType: string
+		lineageTag: 65d27096-f1ec-4435-bc58-e2d20c599bca
+		summarizeBy: none
+		sourceColumn: Event Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 66ad9261-2071-463b-bd49-af50141f7f46
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: 37ac2f8c-cdb8-4fad-85ff-5d7314550e2c
+			defaultHierarchy: LocalDateTable_76c61e8b-bf37-4b1f-9b1e-e9cb1ea1bea8.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6d74ca82-8de0-4e0b-995a-f40f1ca44be7
+		summarizeBy: none
+		sourceColumn: Modified At
+
+		variation Variation
+			isDefault
+			relationship: b369630b-aaa1-4d8f-b135-8c525eab1be4
+			defaultHierarchy: LocalDateTable_dc5bddee-41f7-4726-a97c-85245999b63b.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created By'
+		dataType: string
+		lineageTag: 7d5d9244-9ac0-4c01-b966-980819228bc5
+		summarizeBy: none
+		sourceColumn: Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified By'
+		dataType: string
+		lineageTag: 9276e62f-a80e-43f4-8f49-3b1ce5f6c8a2
+		summarizeBy: none
+		sourceColumn: Modified By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'All Day'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d8aea21b-6b6e-415f-a876-a2d655d6a488
+		summarizeBy: none
+		sourceColumn: All Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Event Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1d31243a-3040-49e5-829d-e51cbac7f9d1
+		summarizeBy: none
+		sourceColumn: Planned Event Date
+
+		variation Variation
+			isDefault
+			relationship: 22df0f99-392a-44f1-84ba-91392eaaf7eb
+			defaultHierarchy: LocalDateTable_644a555c-ad38-4c2a-b564-1cc68c3f3317.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Planned Event Date Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: c3304175-4993-4231-a516-f9949397667b
+		summarizeBy: sum
+		sourceColumn: Planned Event Date Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Event Date Month'
+		dataType: string
+		lineageTag: ab7652fc-e643-4dbd-88a7-9f7a10ce602e
+		summarizeBy: none
+		sourceColumn: Planned Event Date Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Event Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3101cea8-4003-4a52-a21b-b6015762b421
+		summarizeBy: sum
+		sourceColumn: Planned Event Month Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Event Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 43417ffc-d194-44a9-a4b9-66034baedcb7
+		summarizeBy: count
+		sourceColumn: Planned Event Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Planned Events' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Fact Planned Events_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Fact Planned Events",version=""]}[Data]
+				in
+				    #"Fact Planned Events_"
+
+	annotation PBI_ResultType = Table
+

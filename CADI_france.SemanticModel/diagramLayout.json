@@ -1,0 +1,295 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 333.33333333333337
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1674.351762716793,
+            "y": 737.64933479399838
+          },
+          "nodeIndex": "Dim Area Products",
+          "nodeLineageTag": "04b982ef-16f9-449b-a4e6-45aadaccef46",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 593.58392547880817,
+            "y": 1052.3306622345754
+          },
+          "nodeIndex": "Dim Area Type",
+          "nodeLineageTag": "f93660f5-1495-4b29-805e-22c98180a684",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1958.351762716793,
+            "y": 735.64933479399838
+          },
+          "nodeIndex": "Dim Calendar",
+          "nodeLineageTag": "93c10a9c-dc56-4a87-9d56-eeff62d72a50",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1231.0735105430256,
+            "y": 1023.8146102061048
+          },
+          "nodeIndex": "Dim Customer",
+          "nodeLineageTag": "6fe4d81a-a48d-4fed-ba47-5928eef3f559",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 307.87287047015536,
+            "y": 995.21770491871268
+          },
+          "nodeIndex": "Dim Event Type",
+          "nodeLineageTag": "ebad97e6-86f9-4ba5-905a-c94fb5b5e619",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1440.351762716793,
+            "y": 692.5235351261947
+          },
+          "nodeIndex": "Dim Mercher",
+          "nodeLineageTag": "cc9241e4-3e4b-4de9-b5ea-f1081c1cf47a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2242.351762716793,
+            "y": 761.64933479399838
+          },
+          "nodeIndex": "Dim Notes",
+          "nodeLineageTag": "1e3b7315-2b58-4b50-9ab9-962d791744f3",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2526.351762716793,
+            "y": 735.64933479399838
+          },
+          "nodeIndex": "Dim Point of Sales",
+          "nodeLineageTag": "86dda2bc-17a2-4ada-8bbc-72515d3a660c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2810.351762716793,
+            "y": 735.64933479399838
+          },
+          "nodeIndex": "Dim Prospect",
+          "nodeLineageTag": "34a6b7e0-7054-44c6-a31d-038edb300a50",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3094.351762716793,
+            "y": 785.64933479399838
+          },
+          "nodeIndex": "Dim Prospect Sales Representative",
+          "nodeLineageTag": "a184fb67-2ee8-46ea-a575-9c7d0396d343",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 964.70494938423917,
+            "y": -50
+          },
+          "nodeIndex": "Dim Question",
+          "nodeLineageTag": "0565f89e-6d9b-4fe5-ab06-7e4e9986caf0",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 597.53050138343326,
+            "y": 692.32777200027112
+          },
+          "nodeIndex": "Dim Sales Organization",
+          "nodeLineageTag": "2aa2d5b2-2003-4169-ba33-94712e9c5b8c",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 963.10979063119612,
+            "y": 663.02585834165166
+          },
+          "nodeIndex": "Dim Sales Representative",
+          "nodeLineageTag": "a1fb93ff-e96d-48f9-ad54-865a10bbcae0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 595.64611525835755,
+            "y": 1497.2986695879968
+          },
+          "nodeIndex": "Dim Sub Brand",
+          "nodeLineageTag": "d3cdab3c-ef73-4791-afbd-8f9ab2710d3a",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 719.10758502727981,
+            "y": 306.24745516028611
+          },
+          "nodeIndex": "Dim Survey",
+          "nodeLineageTag": "bc8a8cf6-84d4-46e1-a217-c055f5a34350",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 884.84783852542682,
+            "y": 1375.367143762146
+          },
+          "nodeIndex": "Fact Area Management",
+          "nodeLineageTag": "36dd56aa-5734-4913-8176-f489789ff84c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 637.81833038999321
+          },
+          "nodeIndex": "Fact Events",
+          "nodeLineageTag": "ce300e29-1b0e-41ad-b7d6-ffbc9e4b6270",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 880.40433064237834,
+            "y": 1022.3138190510181
+          },
+          "nodeIndex": "Fact Events Proposal",
+          "nodeLineageTag": "0fcb8863-bddd-4098-bfaa-6953ec02ae25",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 342.70608510143518,
+            "y": 337.19304865417007
+          },
+          "nodeIndex": "Fact Planned Events",
+          "nodeLineageTag": "22a8d4e5-d97e-4566-b2cd-8e33272b62bd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3378.351762716793,
+            "y": 735.64933479399838
+          },
+          "nodeIndex": "Fact Prospect Lifecycle",
+          "nodeLineageTag": "2b6d8b76-ba21-4ead-8c8f-0c7124a29043",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1255.8093436172962,
+            "y": 332.35540514579543
+          },
+          "nodeIndex": "Fact Survey Answer",
+          "nodeLineageTag": "7f19201d-1e74-40d6-9d56-3b7ab670b6f6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 30,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

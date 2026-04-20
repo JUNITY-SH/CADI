@@ -1,0 +1,89 @@
+table 'Dim Question'
+	lineageTag: 0565f89e-6d9b-4fe5-ab06-7e4e9986caf0
+
+	column 'Question ID'
+		dataType: string
+		lineageTag: ed65f054-7b21-40de-ae6c-b2047a0681b7
+		summarizeBy: none
+		sourceColumn: Question ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mandatory
+		dataType: int64
+		formatString: 0
+		lineageTag: e1fd7751-5be5-41f8-a6c8-b2d6aa573ca9
+		summarizeBy: sum
+		sourceColumn: Mandatory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question
+		dataType: string
+		lineageTag: df6af4ff-316d-4995-8362-dd17584dfa60
+		summarizeBy: none
+		sourceColumn: Question
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: f7d8c8fc-6b24-4229-a47f-1899f446cf72
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey ID'
+		dataType: string
+		lineageTag: 809c2447-df2b-40e5-8322-8e8916431bc3
+		summarizeBy: none
+		sourceColumn: Survey ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Code'
+		dataType: string
+		lineageTag: 2003b90b-90ee-4829-b1c9-1693b5072c06
+		summarizeBy: none
+		sourceColumn: Sales Organization Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question Key'
+		dataType: string
+		lineageTag: 854018b8-16eb-4cc1-ac3d-1408fe102383
+		summarizeBy: none
+		sourceColumn: Question Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question Section'
+		dataType: string
+		lineageTag: a33ec085-d825-4ba5-bf71-4f350e2bbe5d
+		summarizeBy: none
+		sourceColumn: Question Section
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 64cbab4e-acb0-455f-a996-688d00e0e082
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Question' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Question_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Question",version=""]}[Data]
+				in
+				    #"Dim Question_"
+

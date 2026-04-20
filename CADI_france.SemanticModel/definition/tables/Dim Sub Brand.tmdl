@@ -1,0 +1,63 @@
+table 'Dim Sub Brand'
+	lineageTag: d3cdab3c-ef73-4791-afbd-8f9ab2710d3a
+
+	column 'Old Sub Brand Key'
+		dataType: string
+		lineageTag: fc9400ac-f9b9-4e59-940e-25e9e2297ce7
+		summarizeBy: none
+		sourceColumn: Old Sub Brand Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Brand Key'
+		dataType: string
+		lineageTag: 19f50289-e799-4618-bdee-e5d225ea896f
+		summarizeBy: none
+		sourceColumn: Sub Brand Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Uuid'
+		dataType: string
+		lineageTag: 0d2d3fc8-6ebb-461c-a3ae-d220bb40a832
+		summarizeBy: none
+		sourceColumn: Product Uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Brand Name'
+		dataType: string
+		lineageTag: 3a6ee90f-8fec-4a1e-bfd5-bbadabb9c907
+		summarizeBy: none
+		sourceColumn: Sub Brand Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Type'
+		dataType: string
+		lineageTag: de4fc3ca-cd52-482d-8c35-a7ed08a13ff5
+		summarizeBy: none
+		sourceColumn: Product Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: 781c3796-7cb1-4632-902a-9a0889f6a242
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Sub Brand' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Sub Brand_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Sub Brand",version=""]}[Data]
+				in
+				    #"Dim Sub Brand_"
+

@@ -1,0 +1,64 @@
+table 'Dim Area Type'
+	lineageTag: f93660f5-1495-4b29-805e-22c98180a684
+
+	column 'Old Area Type Key'
+		dataType: string
+		lineageTag: e7db06ab-a35f-42a7-b6f1-94445d8e8d3c
+		summarizeBy: none
+		sourceColumn: Old Area Type Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Type Key'
+		dataType: string
+		lineageTag: fc96077e-bb03-4807-a0a3-ab27336883cb
+		summarizeBy: none
+		sourceColumn: Area Type Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Type'
+		dataType: string
+		lineageTag: 4ba13f0d-c8b6-4849-8f88-60ccf4694748
+		summarizeBy: none
+		sourceColumn: Area Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'On Trade'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 308f2087-ed2c-4b45-8307-6c05cbab9fc1
+		summarizeBy: none
+		sourceColumn: On Trade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Type Uuid'
+		dataType: string
+		lineageTag: 6a111d88-bbf8-4fb0-aab0-e32c535183e9
+		summarizeBy: none
+		sourceColumn: Area Type Uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: 2b06e647-5169-4fb6-ab03-71a15c639a7d
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Area Type' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Area Type_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Area Type",version=""]}[Data]
+				in
+				    #"Dim Area Type_"
+

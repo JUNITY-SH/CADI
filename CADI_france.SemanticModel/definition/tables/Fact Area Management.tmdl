@@ -1,0 +1,192 @@
+table 'Fact Area Management'
+	lineageTag: 36dd56aa-5734-4913-8176-f489789ff84c
+
+	column 'Sub Brand Key'
+		dataType: string
+		lineageTag: 16a94272-5003-45bf-b27d-a48913f8f3d6
+		summarizeBy: none
+		sourceColumn: Sub Brand Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Management Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2d624868-536c-4681-94bf-a56cdcbb12d0
+		summarizeBy: none
+		sourceColumn: Area Management Date
+
+		variation Variation
+			isDefault
+			relationship: 10605128-317b-4164-a95c-6b0782bf1189
+			defaultHierarchy: LocalDateTable_9fc51188-ff5e-46ab-bdc6-afd55cf8ecd9.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Area Type Key'
+		dataType: string
+		lineageTag: ae30c8a1-189e-4662-8ee0-5716285b259c
+		summarizeBy: none
+		sourceColumn: Area Type Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Product Key'
+		dataType: string
+		lineageTag: 165abf82-3744-4cc5-a0de-d5c4617f79a1
+		summarizeBy: none
+		sourceColumn: Area Product Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: d6836e6d-6fbb-49cf-8c04-ce6dd4fd772c
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: ea4ab692-ddb2-42a6-9056-c1685000c803
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number Of Brands'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cefcb4a-2b60-44e6-b36b-8040fcd32245
+		summarizeBy: sum
+		sourceColumn: Number Of Brands
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Branded'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bfa9ddd-4257-4f9e-9cb2-835a03ed462f
+		summarizeBy: sum
+		sourceColumn: Is Branded
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is On Menu'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e9f0f32-3cda-4efe-b05e-5f7cbb1e1038
+		summarizeBy: sum
+		sourceColumn: Is On Menu
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company
+		dataType: string
+		lineageTag: 3232d007-5e85-48d1-9869-c84e6cd3354b
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Representative Key'
+		dataType: string
+		lineageTag: e029d715-e8f6-46a4-8d6c-be1055786ce5
+		summarizeBy: none
+		sourceColumn: Sales Representative Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created By'
+		dataType: string
+		lineageTag: 5fa62643-7f65-4dd5-9d3d-b64feab28152
+		summarizeBy: none
+		sourceColumn: Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Swivel Tap'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4266acdf-22a0-480c-9eeb-0a9798d436d4
+		summarizeBy: sum
+		sourceColumn: Is Swivel Tap
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0aef15cc-f5c9-4b1a-96e3-7182a3ae770a
+		summarizeBy: none
+		sourceColumn: Modified At
+
+		variation Variation
+			isDefault
+			relationship: d685095f-8fb2-421a-bd0b-96a2f946b896
+			defaultHierarchy: LocalDateTable_e3768b0c-c80a-43f6-b1ef-efcb29d6bb0d.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dataops Created By'
+		dataType: string
+		lineageTag: ce55aef7-98e9-4a66-9edc-af40706fca47
+		summarizeBy: none
+		sourceColumn: Dataops Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dataops Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e7d4643-fb34-42ca-a9b3-1604ed01df30
+		summarizeBy: none
+		sourceColumn: Dataops Created At
+
+		variation Variation
+			isDefault
+			relationship: 42e595d4-a15f-4629-8afa-cbcdf0f2c8d7
+			defaultHierarchy: LocalDateTable_ed6ff794-dc89-46b9-8757-1eb80b783141.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Management Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d9760a80-4fb0-482e-9dba-c8c93ffe312e
+		summarizeBy: none
+		sourceColumn: Area Management Datetime
+
+		variation Variation
+			isDefault
+			relationship: f26e90b1-3e49-4a9c-9391-e30a789685d2
+			defaultHierarchy: LocalDateTable_f8a67a94-f5de-493a-ad8c-e14554c42140.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Area Management Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: f447bcad-fe3f-46ea-baeb-01c6dcc590b3
+		summarizeBy: count
+		sourceColumn: Area Management Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Area Management' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Fact Area Management_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Fact Area Management",version=""]}[Data]
+				in
+				    #"Fact Area Management_"
+
+	annotation PBI_ResultType = Table
+

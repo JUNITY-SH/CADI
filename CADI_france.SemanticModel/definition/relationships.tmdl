@@ -1,0 +1,348 @@
+relationship 9eb4399e-bfb8-4194-933e-0037ebef2a1e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Area Products'.'Dataops Created At'
+	toColumn: LocalDateTable_3fde3347-3c3e-481a-84a8-3efd72c4d30b.Date
+
+relationship b34f226c-f465-4b7a-b953-391194212abf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Calendar'.Date
+	toColumn: LocalDateTable_21f007aa-a013-4847-bb61-d2ab67a3027b.Date
+
+relationship e60e1f4d-cbe2-4961-840b-a4fa4ae61bad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Calendar'.'Week Commencing'
+	toColumn: LocalDateTable_c2415933-9718-4a4f-a671-a0fee74cc4cd.Date
+
+relationship 86e644d9-4aed-4091-8a7f-56cf7feaaf1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Customer'.'Start Date'
+	toColumn: LocalDateTable_28ec7075-3b98-4c36-a58b-1222481e7da7.Date
+
+relationship 31cdc0b7-851b-4e1b-a71a-379c49599719
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Mercher'.'Created At'
+	toColumn: LocalDateTable_3bf0c5f0-c203-43dd-8b3b-ab2b2b84424b.Date
+
+relationship 52defd62-ceb0-4b1f-bd31-78cce3ca7421
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Mercher'.'Modified At'
+	toColumn: LocalDateTable_5cda81a5-afb5-40e9-9c0c-27e5ba72af74.Date
+
+relationship 05d1306e-8ede-49eb-a5fb-5388fa31da7a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Notes'.'Created At'
+	toColumn: LocalDateTable_f77f09c8-263b-49e0-bae9-2060490ff5e7.Date
+
+relationship 1d821854-412d-45b9-9220-6732e78e31ce
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Prospect'.'Created At'
+	toColumn: LocalDateTable_5b940e60-85fb-417c-98f3-53a58e2ad26b.Date
+
+relationship 0cb197b3-7645-4dfe-affa-58b67276bd47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Sales Representative'.'Start Date'
+	toColumn: LocalDateTable_01ff86e1-34c5-4182-99d0-3953258a992f.Date
+
+relationship ab996bbb-131d-4b31-9249-e9fcf635f3b8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Survey'.'Survey Created Date'
+	toColumn: LocalDateTable_af2bab26-5f49-4f02-941d-4f0406a7c33c.Date
+
+relationship b1e0a7d0-9e22-4da9-b2ae-8acd6b47edb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Survey'.'Start Date'
+	toColumn: LocalDateTable_bb1d0828-2ff8-427e-b838-63a429f69727.Date
+
+relationship 5958be46-b356-4556-beaf-4732ad3591ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Survey'.'End Date'
+	toColumn: LocalDateTable_311a9a8c-2b47-4080-bb48-e7d9ada99825.Date
+
+relationship 4998501a-27e9-41d9-a2dd-a21312df7aa5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Survey'.'Survey Latest Submission Date'
+	toColumn: LocalDateTable_619a4fa4-68e9-4c71-bf8c-379335fc7418.Date
+
+relationship 10605128-317b-4164-a95c-6b0782bf1189
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Area Management'.'Area Management Date'
+	toColumn: LocalDateTable_9fc51188-ff5e-46ab-bdc6-afd55cf8ecd9.Date
+
+relationship d685095f-8fb2-421a-bd0b-96a2f946b896
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Area Management'.'Modified At'
+	toColumn: LocalDateTable_e3768b0c-c80a-43f6-b1ef-efcb29d6bb0d.Date
+
+relationship 42e595d4-a15f-4629-8afa-cbcdf0f2c8d7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Area Management'.'Dataops Created At'
+	toColumn: LocalDateTable_ed6ff794-dc89-46b9-8757-1eb80b783141.Date
+
+relationship f26e90b1-3e49-4a9c-9391-e30a789685d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Area Management'.'Area Management Datetime'
+	toColumn: LocalDateTable_f8a67a94-f5de-493a-ad8c-e14554c42140.Date
+
+relationship a077c90e-29cf-4f63-a2ec-b395ca66cda0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Scheduled End Date'
+	toColumn: LocalDateTable_551bb7fc-fc83-4de0-8a04-bddebf7140f0.Date
+
+relationship 7c94f6c4-ad59-4662-8ec0-716f73a6687a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Proposal End Date'
+	toColumn: LocalDateTable_7b59efb2-c371-41f3-9280-dfceb0abe480.Date
+
+relationship 0ba63a7d-ece3-4356-9aba-f34a4acb819b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event End Date'
+	toColumn: LocalDateTable_74e2a452-3fbc-4700-9d88-0f6e602efeae.Date
+
+relationship d50ffebb-177d-4f5e-9eca-bb24f828787d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Proposal Start Date'
+	toColumn: LocalDateTable_e3e28ed9-fad7-4ecc-8536-e66c1f8f6127.Date
+
+relationship ce4f7a2c-9174-4383-a893-20d97a9b4126
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Scheduled Start Date'
+	toColumn: LocalDateTable_5be2016c-2952-4ccd-a56c-5c81f4bfe919.Date
+
+relationship f3707bfe-4778-4de5-b0f7-d2ced9748785
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Start Date'
+	toColumn: LocalDateTable_ef8e01c7-176f-4975-b71c-845ebf76bd75.Date
+
+relationship 99a97eee-7367-493a-a47e-0a7cd309cf14
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Modified At'
+	toColumn: LocalDateTable_a398de42-cdff-4eb1-a2b5-d99aafe27539.Date
+
+relationship 40fd956d-4b13-47d9-b714-84e761ffedf8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Proposal Date'
+	toColumn: LocalDateTable_46c212ce-f992-44d9-8079-6004448e8d82.Date
+
+relationship 3a2d602d-768c-4f11-930b-0c8d44e06aed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event Start Date'
+	toColumn: LocalDateTable_28e8d948-65f9-4bb6-809f-bf614eacaefa.Date
+
+relationship dd4ed7e6-ba4c-4dfa-a6e8-f0a32290039a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event Start Datetime'
+	toColumn: LocalDateTable_2a82eac5-0c3b-4403-abe9-41e33419fa56.Date
+
+relationship 56748dec-a26b-47d9-a813-a444073f211a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event End Date'
+	toColumn: LocalDateTable_3821a229-3832-4dc6-b2e0-7864d7f60a96.Date
+
+relationship 81540bb5-c309-42c7-9557-4107dbbe65c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event End Datetime'
+	toColumn: LocalDateTable_eaf329f3-b30a-4a69-9936-b881ca68dbc7.Date
+
+relationship d5c618b7-1994-49e9-851a-d9137dd6a092
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Scheduled Start Date'
+	toColumn: LocalDateTable_e27fb186-af3e-4725-a8dc-95203d0e28b6.Date
+
+relationship 52515a02-f3b7-44cc-9389-dcbd9b4f865f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Scheduled Start Datetime'
+	toColumn: LocalDateTable_25abd722-ef2d-4ca7-8aed-1c27f34801f1.Date
+
+relationship 58fa00a9-1020-428c-91ff-890cd510c85c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Scheduled End Date'
+	toColumn: LocalDateTable_12d61476-178a-41d2-9a8a-5faacbe7d048.Date
+
+relationship 3cbff057-2f4f-4379-b6c5-f2057b188b52
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Scheduled End Datetime'
+	toColumn: LocalDateTable_9625c961-71c8-446d-bceb-3b3277c692e2.Date
+
+relationship 30d8bbdb-f3f0-451e-b237-023b43182949
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Creation Date'
+	toColumn: LocalDateTable_38a19346-57c9-4150-8594-04345575e09a.Date
+
+relationship 86d4dc26-fdd4-4ade-8f26-fefa3867b455
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Creation Datetime'
+	toColumn: LocalDateTable_3695bdad-ff65-4c0d-8fbc-3b2fcea58ab0.Date
+
+relationship 04455ed8-12d8-4d83-8664-0fbb24b811f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Created At'
+	toColumn: LocalDateTable_809832f6-2093-4646-adb8-93ed7694453a.Date
+
+relationship d10419a2-5d67-4905-8427-f288113f8e12
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Modified At'
+	toColumn: LocalDateTable_efca26ec-515d-4d3f-a034-65f9cd95a78f.Date
+
+relationship 7d0489a9-f45c-4bd0-ac60-8c51b3d7fffb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event Date'
+	toColumn: LocalDateTable_ad484095-c121-4ea6-9390-94dbb700376e.Date
+
+relationship 37ac2f8c-cdb8-4fad-85ff-5d7314550e2c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Planned Events'.'Created At'
+	toColumn: LocalDateTable_76c61e8b-bf37-4b1f-9b1e-e9cb1ea1bea8.Date
+
+relationship b369630b-aaa1-4d8f-b135-8c525eab1be4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Planned Events'.'Modified At'
+	toColumn: LocalDateTable_dc5bddee-41f7-4726-a97c-85245999b63b.Date
+
+relationship 22df0f99-392a-44f1-84ba-91392eaaf7eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Planned Events'.'Planned Event Date'
+	toColumn: LocalDateTable_644a555c-ad38-4c2a-b564-1cc68c3f3317.Date
+
+relationship 9328b188-2886-4f0e-900d-c2b45e4bffc2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Prospect Lifecycle'.'Created At'
+	toColumn: LocalDateTable_4dd6c5f1-171b-4aee-85a5-2bda328b6e22.Date
+
+relationship 7d3f2534-748e-4114-8ba4-66fe6a6b503b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Prospect Lifecycle'.'Original Created At'
+	toColumn: LocalDateTable_fc1932a0-41d0-47df-9eb6-dc84cfb09e51.Date
+
+relationship 473b1bb8-b02a-4cd3-96f4-847efb7aeb9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Prospect Lifecycle'.'Original Updated At'
+	toColumn: LocalDateTable_aadb7b41-b8d7-43dd-b206-628da130d9ee.Date
+
+relationship 556959e2-abae-4941-ac12-8f04dc47abb2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Prospect Lifecycle'.'Lifecycle Date'
+	toColumn: LocalDateTable_356e2492-d742-4697-a677-e7946a91a1db.Date
+
+relationship eb20b0d5-2873-4354-a1d9-9adea5aeda4e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Survey Answer'.'Submission Datetime'
+	toColumn: LocalDateTable_02c99bfc-6bb0-46e8-b21a-d374bc653337.Date
+
+relationship 5bc79670-36e9-4f45-8a89-533af6f242fa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Survey Answer'.'Modified At'
+	toColumn: LocalDateTable_11729720-c05c-4f38-97ac-dd23430ba2d2.Date
+
+relationship e4e5dd16-5aa5-48a4-b69d-012bc2c6a59e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Survey Answer'.'Created At'
+	toColumn: LocalDateTable_4b1d689a-6720-483a-9ae6-6370829ac966.Date
+
+relationship 9178e2bc-d7af-499a-b9b2-a9460d7dcabd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Survey Answer'.'Answer Date'
+	toColumn: LocalDateTable_3d47f325-b106-458d-adb6-03abab473bd4.Date
+
+relationship AutoDetected_c44f32bf-15aa-4e2c-86eb-649ae4980b57
+	fromColumn: 'Fact Area Management'.'Area Type Key'
+	toColumn: 'Dim Area Type'.'Area Type Key'
+
+relationship AutoDetected_276d7edf-415a-4814-a287-e5eef8aa1830
+	fromColumn: 'Dim Area Type'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_d4dadfef-6fed-443f-8740-60d56ad3cd38
+	fromColumn: 'Dim Sub Brand'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_a05aac75-5bcb-48f7-80e4-2b19fd4704fb
+	isActive: false
+	fromColumn: 'Fact Area Management'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_aaa7a5b7-5836-4930-9360-da091f89cf0f
+	fromColumn: 'Fact Events Proposal'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_4c1adc19-b127-4836-b686-087db7c517bf
+	fromColumn: 'Fact Events'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_7d580806-b4ae-4638-9ff6-89ae11361526
+	fromColumn: 'Fact Planned Events'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_635635e9-4121-46bd-86db-efcf361bb8d9
+	fromColumn: 'Fact Survey Answer'.'Sales Organization Key'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Key'
+
+relationship AutoDetected_1dae1681-eca8-46e7-8273-6c2b29a989e1
+	fromColumn: 'Dim Event Type'.'Sales Organization Code'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Code'
+
+relationship AutoDetected_9d822417-1708-4f20-b349-63d734df74d4
+	fromColumn: 'Dim Sales Representative'.'Sales Organization Code'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Code'
+
+relationship AutoDetected_a9a4bc40-4e5b-4e47-adb1-cc53acd74b26
+	fromColumn: 'Dim Question'.'Sales Organization Code'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Code'
+
+relationship AutoDetected_3aea03c3-f3eb-4545-8efc-4e69d82cd5f1
+	fromColumn: 'Dim Survey'.'Sales Organization Code'
+	toColumn: 'Dim Sales Organization'.'Sales Organization Code'
+
+relationship AutoDetected_73c2899f-e649-4247-bbf3-07e1ed6abc97
+	fromColumn: 'Fact Area Management'.'Customer Key'
+	toColumn: 'Dim Customer'.'Customer Key'
+
+relationship AutoDetected_488bc984-a7bd-4ab0-8344-c6503f319b87
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Fact Events Proposal'.'Customer Key'
+	toColumn: 'Dim Customer'.'Customer Key'
+
+relationship AutoDetected_c37f90a2-b81f-42f4-b0fb-c4c0bacd2413
+	fromColumn: 'Fact Survey Answer'.'Customer Key'
+	toColumn: 'Dim Customer'.'Customer Key'
+
+relationship AutoDetected_e33e6338-d6c6-410a-a51f-0d69c8669899
+	fromColumn: 'Fact Survey Answer'.'Mercher Key'
+	toColumn: 'Dim Mercher'.'Mercher Key'
+
+relationship AutoDetected_bbbfce88-a2ab-409e-8976-60d98383c2e7
+	isActive: false
+	fromColumn: 'Fact Events Proposal'.'Sales Representative Key'
+	toColumn: 'Dim Sales Representative'.'Sales Representative Key'
+
+relationship AutoDetected_c120a431-62cc-449b-84af-9750916dc263
+	isActive: false
+	fromColumn: 'Fact Survey Answer'.'Sales Representative Key'
+	toColumn: 'Dim Sales Representative'.'Sales Representative Key'
+
+relationship AutoDetected_441f7f0f-123a-4e30-9fcb-087dd698eb8c
+	isActive: false
+	fromColumn: 'Dim Question'.'Survey ID'
+	toColumn: 'Dim Survey'.'Survey ID'
+
+relationship AutoDetected_39867eb3-2b0a-448f-a9e0-dc31ab0f8c22
+	isActive: false
+	fromColumn: 'Fact Survey Answer'.'Question Key'
+	toColumn: 'Dim Question'.'Question Key'
+
+relationship AutoDetected_4c1119c1-83f5-40ea-b77c-e1a9f66bf6f3
+	isActive: false
+	fromColumn: 'Fact Area Management'.'Sub Brand Key'
+	toColumn: 'Dim Sub Brand'.'Sub Brand Key'
+
+relationship AutoDetected_4a0ad927-1456-44d6-a2f6-358c1352d627
+	isActive: false
+	fromColumn: 'Fact Survey Answer'.'Survey Key'
+	toColumn: 'Dim Survey'.'Survey Key'
+
+relationship AutoDetected_8f9eafea-0c91-45d3-a5b4-dfa445de19d4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Fact Planned Events'.'Event Id'
+	toColumn: 'Fact Events'.'Event Id'
+

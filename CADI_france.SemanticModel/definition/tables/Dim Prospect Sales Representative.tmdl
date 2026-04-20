@@ -1,0 +1,55 @@
+table 'Dim Prospect Sales Representative'
+	lineageTag: a184fb67-2ee8-46ea-a575-9c7d0396d343
+
+	column 'Sales Rep Key'
+		dataType: string
+		lineageTag: b614c365-b054-4655-8923-e675ce060522
+		summarizeBy: none
+		sourceColumn: Sales Rep Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep Id'
+		dataType: string
+		lineageTag: e3456e3e-29b5-44e5-b61d-d3839ff9037d
+		summarizeBy: none
+		sourceColumn: Sales Rep Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep Name'
+		dataType: string
+		lineageTag: 4674e808-9a54-44d9-95df-6b65c3201187
+		summarizeBy: none
+		sourceColumn: Sales Rep Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep Email'
+		dataType: string
+		lineageTag: 4434d63a-1147-4e69-9bd8-5d1df54bdbc5
+		summarizeBy: none
+		sourceColumn: Sales Rep Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org Code'
+		dataType: string
+		lineageTag: c5189996-90aa-4492-9793-2d0078a6d99b
+		summarizeBy: none
+		sourceColumn: Sales Org Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Prospect Sales Representative' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Prospect Sales Representative_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Prospect Sales Representative",version=""]}[Data]
+				in
+				    #"Dim Prospect Sales Representative_"
+

@@ -1,0 +1,96 @@
+table 'Dim Area Products'
+	lineageTag: 04b982ef-16f9-449b-a4e6-45aadaccef46
+
+	column 'Area Product Key'
+		dataType: string
+		lineageTag: 1acda11f-e2ad-4114-9f03-3229f847fa99
+		summarizeBy: none
+		sourceColumn: Area Product Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Uuid'
+		dataType: string
+		lineageTag: e28c3313-57ae-4e60-83cd-928949b1a740
+		summarizeBy: none
+		sourceColumn: Product Uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: cf454ba3-e5c7-4e0f-b236-85adc87b8042
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org Code'
+		dataType: string
+		lineageTag: d216254a-f488-48c1-a753-86fe40c244e5
+		summarizeBy: none
+		sourceColumn: Sales Org Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sku
+		dataType: string
+		lineageTag: cadefcda-6f09-484b-9c7f-5afa363f72bb
+		summarizeBy: none
+		sourceColumn: Sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Name'
+		dataType: string
+		lineageTag: 4d72a856-a1dc-4bb1-86dd-f649cee5ccdc
+		summarizeBy: none
+		sourceColumn: Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Uuid'
+		dataType: string
+		lineageTag: 6bd7b9c8-b88f-4de9-b667-a37b0b4c85ea
+		summarizeBy: none
+		sourceColumn: Company Uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dataops Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eef51ca5-d1ea-466f-86d0-61ec70313a79
+		summarizeBy: none
+		sourceColumn: Dataops Created At
+
+		variation Variation
+			isDefault
+			relationship: 9eb4399e-bfb8-4194-933e-0037ebef2a1e
+			defaultHierarchy: LocalDateTable_3fde3347-3c3e-481a-84a8-3efd72c4d30b.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: ff2905eb-85ab-4262-8a15-3df6cd267b05
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Area Products' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Area Products_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Area Products",version=""]}[Data]
+				in
+				    #"Dim Area Products_"
+
+	annotation PBI_ResultType = Table
+

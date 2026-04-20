@@ -1,0 +1,238 @@
+table 'Fact Events Proposal'
+	lineageTag: 0fcb8863-bddd-4098-bfaa-6953ec02ae25
+
+	column 'Customer Key'
+		dataType: string
+		lineageTag: 5b3a59df-c334-4b90-86ae-66d99ce7d305
+		summarizeBy: none
+		sourceColumn: Customer Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Type Key'
+		dataType: string
+		lineageTag: bba45e9f-64b0-4cfb-bf75-52b815dfaab3
+		summarizeBy: none
+		sourceColumn: Event Type Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Scheduled End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1e7fd03f-d514-4bd0-aacc-6bc6f62043ab
+		summarizeBy: none
+		sourceColumn: Event Scheduled End Date
+
+		variation Variation
+			isDefault
+			relationship: a077c90e-29cf-4f63-a2ec-b395ca66cda0
+			defaultHierarchy: LocalDateTable_551bb7fc-fc83-4de0-8a04-bddebf7140f0.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fbb29313-8465-47a1-ba01-9c68ebaa5d78
+		summarizeBy: none
+		sourceColumn: Event Proposal End Date
+
+		variation Variation
+			isDefault
+			relationship: 7c94f6c4-ad59-4662-8ec0-716f73a6687a
+			defaultHierarchy: LocalDateTable_7b59efb2-c371-41f3-9280-dfceb0abe480.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2f71e5a7-3502-4ca0-aa8f-488dac7be83b
+		summarizeBy: none
+		sourceColumn: Event End Date
+
+		variation Variation
+			isDefault
+			relationship: 0ba63a7d-ece3-4356-9aba-f34a4acb819b
+			defaultHierarchy: LocalDateTable_74e2a452-3fbc-4700-9d88-0f6e602efeae.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d296d168-d64f-4da9-8dd4-cd6a3d511c5c
+		summarizeBy: none
+		sourceColumn: Event Proposal Start Date
+
+		variation Variation
+			isDefault
+			relationship: d50ffebb-177d-4f5e-9eca-bb24f828787d
+			defaultHierarchy: LocalDateTable_e3e28ed9-fad7-4ecc-8536-e66c1f8f6127.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Executed Event'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3116a11e-b494-4089-bfde-87c55d1d2e45
+		summarizeBy: none
+		sourceColumn: Has Executed Event
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Proposed By'
+		dataType: string
+		lineageTag: 53f49e7e-f5dd-4437-afb8-24d101441176
+		summarizeBy: none
+		sourceColumn: Event Proposal Proposed By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Scheduled Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2dd1a60b-f599-4e11-9397-2741464eb3e3
+		summarizeBy: none
+		sourceColumn: Event Scheduled Start Date
+
+		variation Variation
+			isDefault
+			relationship: ce4f7a2c-9174-4383-a893-20d97a9b4126
+			defaultHierarchy: LocalDateTable_5be2016c-2952-4ccd-a56c-5c81f4bfe919.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Name'
+		dataType: string
+		lineageTag: b7292566-e1e9-40b4-a238-a54b7a4e8fe1
+		summarizeBy: none
+		sourceColumn: Event Proposal Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7951ad1d-70db-448a-9ac1-9ca4d3aa55d4
+		summarizeBy: none
+		sourceColumn: Event Start Date
+
+		variation Variation
+			isDefault
+			relationship: f3707bfe-4778-4de5-b0f7-d2ced9748785
+			defaultHierarchy: LocalDateTable_ef8e01c7-176f-4975-b71c-845ebf76bd75.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Id'
+		dataType: string
+		lineageTag: 65240db5-04f4-4865-add9-a532de7ec169
+		summarizeBy: none
+		sourceColumn: Event Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Created By'
+		dataType: string
+		lineageTag: b5c8d700-e2dc-4ca6-bfa7-7f55f6a18c25
+		summarizeBy: none
+		sourceColumn: Event Proposal Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Scheduled Event'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 800123bb-20fa-479a-bc74-5d50cdbfe054
+		summarizeBy: none
+		sourceColumn: Has Scheduled Event
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Description'
+		dataType: string
+		lineageTag: 4ddbb86d-0f64-4583-8409-6d5f7d41340a
+		summarizeBy: none
+		sourceColumn: Event Proposal Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Status'
+		dataType: string
+		lineageTag: 2d210a39-7aa9-4484-a232-3eb001740c7b
+		summarizeBy: none
+		sourceColumn: Event Proposal Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Representative Key'
+		dataType: string
+		lineageTag: 483de442-9046-45c6-b5dd-d6e6e2d62743
+		summarizeBy: none
+		sourceColumn: Sales Representative Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: c9762227-375a-4c6a-8d18-f5e8671f7699
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modified At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 020d807a-b383-4486-9d88-d6031ba7faf0
+		summarizeBy: none
+		sourceColumn: Modified At
+
+		variation Variation
+			isDefault
+			relationship: 99a97eee-7367-493a-a47e-0a7cd309cf14
+			defaultHierarchy: LocalDateTable_a398de42-cdff-4eb1-a2b5-d99aafe27539.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Proposal Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5966cfe9-4714-487c-80d7-d73b31761f8d
+		summarizeBy: none
+		sourceColumn: Event Proposal Date
+
+		variation Variation
+			isDefault
+			relationship: 40fd956d-4b13-47d9-b714-84e761ffedf8
+			defaultHierarchy: LocalDateTable_46c212ce-f992-44d9-8079-6004448e8d82.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Event Proposal Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: e4521b04-24d2-4140-8273-b3030dca37f6
+		summarizeBy: count
+		sourceColumn: Event Proposal Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Events Proposal' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Fact Events Proposal_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Fact Events Proposal",version=""]}[Data]
+				in
+				    #"Fact Events Proposal_"
+
+	annotation PBI_ResultType = Table
+

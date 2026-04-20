@@ -1,0 +1,128 @@
+table 'Dim Point of Sales'
+	lineageTag: 86dda2bc-17a2-4ada-8bbc-72515d3a660c
+
+	column 'Pos Key'
+		dataType: string
+		lineageTag: 440d05fa-8304-4f4f-a34a-4ba3294a7a44
+		summarizeBy: none
+		sourceColumn: Pos Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pos Id'
+		dataType: string
+		lineageTag: 0f4c5885-4c33-4622-8596-c57ab75a7d59
+		summarizeBy: none
+		sourceColumn: Pos Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pos Name'
+		dataType: string
+		lineageTag: 929c6577-fd83-463c-a8cd-1dbb7b3beddd
+		summarizeBy: none
+		sourceColumn: Pos Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wholesaler Id'
+		dataType: string
+		lineageTag: ca4d19ba-ceb9-4725-8d9a-bfa1a9e37e3e
+		summarizeBy: none
+		sourceColumn: Wholesaler Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wholesaler Name'
+		dataType: string
+		lineageTag: 692dce8f-4933-41ec-822d-aeb89e24e192
+		summarizeBy: none
+		sourceColumn: Wholesaler Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Group Code'
+		dataType: string
+		lineageTag: d6906b62-c439-44b5-841c-4913f931d37f
+		summarizeBy: none
+		sourceColumn: Sales Group Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Group Name'
+		dataType: string
+		lineageTag: 1d162ca3-b4d2-4e5b-b281-b3339b23ff1c
+		summarizeBy: none
+		sourceColumn: Sales Group Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Wholesaler Id'
+		dataType: string
+		lineageTag: b0d9f2d9-98c1-47e1-b227-ce561ae3d4ec
+		summarizeBy: none
+		sourceColumn: Sub Wholesaler Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Wholesaler Name'
+		dataType: string
+		lineageTag: c4d363ff-75f7-4b88-bf65-78e77e2634ec
+		summarizeBy: none
+		sourceColumn: Sub Wholesaler Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direct Wholesaler Id'
+		dataType: string
+		lineageTag: c1213b33-3668-46ae-bf87-342396f39414
+		summarizeBy: none
+		sourceColumn: Direct Wholesaler Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Company Name'
+		dataType: string
+		lineageTag: 42115c03-0429-4707-b9eb-b860275c7ba6
+		summarizeBy: none
+		sourceColumn: Sub Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Name'
+		dataType: string
+		lineageTag: 04f8cca5-282c-48c1-a9ee-f8aa1b9f5622
+		summarizeBy: none
+		sourceColumn: Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Code'
+		dataType: string
+		lineageTag: a664bc46-91bb-4fce-8658-a9fabd729fba
+		summarizeBy: none
+		sourceColumn: Sales Organization Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 857052e2-831c-4432-8bac-c4c5723430c3
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Point of Sales' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Dim Point of Sales_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Dim Point of Sales",version=""]}[Data]
+				in
+				    #"Dim Point of Sales_"
+

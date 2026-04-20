@@ -1,0 +1,158 @@
+table 'Fact Prospect Lifecycle'
+	lineageTag: 2b6d8b76-ba21-4ead-8c8f-0c7124a29043
+
+	column 'Prospect Key'
+		dataType: string
+		lineageTag: 872d706e-3fbf-45f0-b8b1-0dc230f2aa14
+		summarizeBy: none
+		sourceColumn: Prospect Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization Key'
+		dataType: string
+		lineageTag: d2fd6d35-a89c-4598-be2e-b95300e68aaa
+		summarizeBy: none
+		sourceColumn: Sales Organization Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Representative Key'
+		dataType: string
+		lineageTag: e730b943-efbb-4f65-b632-4983148850bc
+		summarizeBy: none
+		sourceColumn: Sales Representative Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0edc04b0-61ba-43f4-b5c4-5c7c86875b62
+		summarizeBy: none
+		sourceColumn: Created At
+
+		variation Variation
+			isDefault
+			relationship: 9328b188-2886-4f0e-900d-c2b45e4bffc2
+			defaultHierarchy: LocalDateTable_4dd6c5f1-171b-4aee-85a5-2bda328b6e22.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Original Created At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f1705c9d-08d9-4551-a66e-8b2750535e87
+		summarizeBy: none
+		sourceColumn: Original Created At
+
+		variation Variation
+			isDefault
+			relationship: 7d3f2534-748e-4114-8ba4-66fe6a6b503b
+			defaultHierarchy: LocalDateTable_fc1932a0-41d0-47df-9eb6-dc84cfb09e51.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Original Updated At'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 76696832-e252-42ba-a424-517cebdeffc9
+		summarizeBy: none
+		sourceColumn: Original Updated At
+
+		variation Variation
+			isDefault
+			relationship: 473b1bb8-b02a-4cd3-96f4-847efb7aeb9e
+			defaultHierarchy: LocalDateTable_aadb7b41-b8d7-43dd-b206-628da130d9ee.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lifecycle Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0ff0d3dc-82ca-483a-9922-ea6a78945fd4
+		summarizeBy: none
+		sourceColumn: Lifecycle Date
+
+		variation Variation
+			isDefault
+			relationship: 556959e2-abae-4941-ac12-8f04dc47abb2
+			defaultHierarchy: LocalDateTable_356e2492-d742-4697-a677-e7946a91a1db.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Is Cancelled'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e3c9d685-20f0-498a-ab18-96f2a6e4f3d0
+		summarizeBy: none
+		sourceColumn: Is Cancelled
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Parked'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7b1b9007-3d0a-4764-8705-1811ea87a0eb
+		summarizeBy: none
+		sourceColumn: Is Parked
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: e559cd5e-01d8-446e-a448-2fa96dd5fb27
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: c078af83-551f-4844-8a2e-be19d3ab1167
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Status'
+		dataType: string
+		lineageTag: 7293ab07-6d1b-4b6f-b04b-7b5dcd44a4ce
+		summarizeBy: none
+		sourceColumn: Current Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Previous Status'
+		dataType: string
+		lineageTag: b9618ebe-0b02-4a24-b9ba-980c6eae0a53
+		summarizeBy: none
+		sourceColumn: Previous Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Order'
+		dataType: int64
+		formatString: 0
+		lineageTag: e5e39e17-af2c-4324-b0f4-1d300ed1c334
+		summarizeBy: sum
+		sourceColumn: Status Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Prospect Lifecycle' = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba" = Workspaces{[workspaceId="cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"]}[Data],
+				    #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c" = #"cd6c4dcb-1d5f-4e06-9bcb-754eaef3c1ba"{[dataflowId="8cea5f48-52fa-4e57-b1dc-f446c056fc3c"]}[Data],
+				    #"Fact Prospect Lifecycle_" = #"8cea5f48-52fa-4e57-b1dc-f446c056fc3c"{[entity="Fact Prospect Lifecycle",version=""]}[Data]
+				in
+				    #"Fact Prospect Lifecycle_"
+
+	annotation PBI_ResultType = Table
+
