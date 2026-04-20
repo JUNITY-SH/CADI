@@ -1,0 +1,221 @@
+table _Measures
+	lineageTag: 327a45cf-d9b6-403f-8d68-5bc4c03ba3ea
+
+	column _Placeholder
+		dataType: string
+		isHidden
+		lineageTag: 8cd265e4-daf0-48d9-beb1-d8b0591f9a65
+		summarizeBy: none
+		sourceColumn: _Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre d'événements exécutés
+	measure '# Events Executed' = CALCULATE(COUNTROWS('Fact Events'), 'Fact Events'[Executed Event Flag] = TRUE)
+		formatString: #,0
+		lineageTag: 37ac20e6-5df6-4bae-a017-56b72fb2a38c
+
+	/// Nombre d'événements planifiés
+	measure '# Planned Events' = COUNTROWS('Fact Planned Events')
+		formatString: #,0
+		lineageTag: 2aff6f7c-d7a9-4de5-8ec6-2c6e8da8873d
+
+	/// Taux d'exécution : événements réalisés / planifiés
+	measure '% Execution Rate' = DIVIDE([# Events Executed], [# Planned Events])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 22da8bde-5bef-4e87-bd2e-ce1e33ac7a2e
+
+	/// Durée moyenne d'un événement (minutes)
+	measure 'Avg Event Duration (min)' = AVERAGE('Fact Events'[Duration In Minutes])
+		formatString: #,0.0
+		lineageTag: f795a292-1c12-4d7d-98f9-b18f2ebbd897
+
+	/// Retard moyen à l'exécution (minutes)
+	measure 'Avg Event Delay (min)' = AVERAGE('Fact Events'[Delay In Minutes])
+		formatString: #,0.0
+		lineageTag: 8aebfb47-18e3-4573-b3c4-e9c634c5bb22
+
+	/// Part d'événements à l'heure (retard <= 0)
+	measure '% Events On Time' =
+			VAR _executed = [# Events Executed]
+			VAR _onTime =
+				CALCULATE(
+					COUNTROWS('Fact Events'),
+					'Fact Events'[Executed Event Flag] = TRUE,
+					'Fact Events'[Delay In Minutes] <= 0
+				)
+			RETURN DIVIDE(_onTime, _executed)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6df9d028-0b81-4e50-826b-242d7ff3c986
+
+	/// Nombre de propositions d'événements
+	measure '# Event Proposals' = COUNTROWS('Fact Events Proposal')
+		formatString: #,0
+		lineageTag: f14bf771-2ce1-481e-9fa8-d9122217dcae
+
+	/// Propositions ayant donné lieu à un événement planifié
+	measure '# Proposals Scheduled' = CALCULATE(COUNTROWS('Fact Events Proposal'), 'Fact Events Proposal'[Has Scheduled Event] = TRUE)
+		formatString: #,0
+		lineageTag: c8731e8a-a0ad-4456-9f3a-a0f8de1934e8
+
+	/// Propositions ayant abouti à un événement exécuté
+	measure '# Proposals Executed' = CALCULATE(COUNTROWS('Fact Events Proposal'), 'Fact Events Proposal'[Has Executed Event] = TRUE)
+		formatString: #,0
+		lineageTag: b7e47393-7de4-4031-ac78-c04dac610c51
+
+	/// Taux de conversion Proposition -> Planifié
+	measure '% Proposal to Scheduled' = DIVIDE([# Proposals Scheduled], [# Event Proposals])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c1cfd61d-85b4-4d11-b3cf-c87dfdbacbc5
+
+	/// Taux de conversion Proposition -> Exécuté
+	measure '% Proposal to Executed' = DIVIDE([# Proposals Executed], [# Event Proposals])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7afccea4-3d24-4c6f-b1b3-51b83f29ed49
+
+	/// Nombre de prospects actifs (non annulés, non en pause)
+	measure '# Prospects Active' =
+			CALCULATE(
+				DISTINCTCOUNT('Fact Prospect Lifecycle'[Prospect Key]),
+				'Fact Prospect Lifecycle'[Is Cancelled] = FALSE,
+				'Fact Prospect Lifecycle'[Is Parked] = FALSE
+			)
+		formatString: #,0
+		lineageTag: b7edc963-b359-457e-8f2a-07529cc0d20e
+
+	/// Nombre de prospects annulés
+	measure '# Prospects Cancelled' = CALCULATE(DISTINCTCOUNT('Fact Prospect Lifecycle'[Prospect Key]), 'Fact Prospect Lifecycle'[Is Cancelled] = TRUE)
+		formatString: #,0
+		lineageTag: c744a0d8-06bf-4322-9851-d24ce46e2482
+
+	/// Nombre de prospects en pause
+	measure '# Prospects Parked' = CALCULATE(DISTINCTCOUNT('Fact Prospect Lifecycle'[Prospect Key]), 'Fact Prospect Lifecycle'[Is Parked] = TRUE)
+		formatString: #,0
+		lineageTag: 8953197f-2df7-4661-b29a-cec9d7e99f93
+
+	/// Nombre total de prospects (uniques)
+	measure '# Prospects Total' = DISTINCTCOUNT('Fact Prospect Lifecycle'[Prospect Key])
+		formatString: #,0
+		lineageTag: 7a967b1a-2fa8-41f4-9a5a-210abf91b6e1
+
+	/// Taux d'annulation des prospects
+	measure '% Cancellation Rate' = DIVIDE([# Prospects Cancelled], [# Prospects Total])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bb4cdbf0-28a4-4032-af28-691cdfa2e0eb
+
+	/// Score total moyen des prospects
+	measure 'Avg Total Lead Score' = AVERAGE('Dim Prospect'[Total Lead Score])
+		formatString: #,0.00
+		lineageTag: 8b7cfdfa-2b44-4a14-b71d-c579b9fb759f
+
+	/// Score potentiel d'achat moyen des prospects
+	measure 'Avg Purchasing Potential' = AVERAGE('Dim Prospect'[Score Purchasing Potential])
+		formatString: #,0.00
+		lineageTag: bb2c1155-feaf-424b-b969-09f858d26e34
+
+	/// Clients distincts visités (Area Management)
+	measure '# Customers Visited' = DISTINCTCOUNT('Fact Area Management'[Customer Key])
+		formatString: #,0
+		lineageTag: 51a12010-566c-4da5-bc0a-e44375eb514b
+
+	/// Taux de couverture : clients visités / clients existants
+	measure '% Customer Coverage' = DIVIDE([# Customers Visited], DISTINCTCOUNT('Dim Customer'[Customer Key]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8bdd7c04-6668-464b-bd83-1d9412e74687
+
+	/// Nombre moyen de marques présentes par visite
+	measure 'Avg Brands per Visit' = AVERAGE('Fact Area Management'[Number Of Brands])
+		formatString: #,0.00
+		lineageTag: c701bc6d-2a89-4f98-a2a0-48f9df3c01a3
+
+	/// Part de présences avec marque visible
+	measure '% Branded' = AVERAGE('Fact Area Management'[Is Branded])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d7027be8-45e5-43b9-b270-ed27d438126b
+
+	/// Part de présences sur le menu
+	measure '% On Menu' = AVERAGE('Fact Area Management'[Is On Menu])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2ddda4ca-fec9-4761-92f1-e120ccc3de4c
+
+	/// Part de tireuses équipées (Swivel Tap)
+	measure '% Swivel Tap' = AVERAGE('Fact Area Management'[Is Swivel Tap])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 378e7a1c-5557-4473-9157-ec9fc722b7c0
+
+	/// Nombre de SKU distincts référencés (Area Management)
+	measure '# SKU Referenced' = DISTINCTCOUNT('Fact Area Management'[Area Product Key])
+		formatString: #,0
+		lineageTag: a694ab96-a236-4170-abc5-c3e0a3840f96
+
+	/// Nombre de réponses de sondage
+	measure '# Survey Answers' = COUNTROWS('Fact Survey Answer')
+		formatString: #,0
+		lineageTag: 26a0d662-a8a8-4a03-b55d-976bb82bc4c6
+
+	/// Nombre de soumissions distinctes
+	measure '# Survey Submissions' = DISTINCTCOUNT('Fact Survey Answer'[Submission ID])
+		formatString: #,0
+		lineageTag: a5659743-2e8c-41d5-a0f8-ab933445e6bc
+
+	/// Score moyen des réponses (relation inactive Survey activée)
+	measure 'Avg Survey Score' =
+			CALCULATE(
+				AVERAGE('Fact Survey Answer'[Score]),
+				USERELATIONSHIP('Fact Survey Answer'[Survey Key], 'Dim Survey'[Survey Key])
+			)
+		formatString: #,0.00
+		lineageTag: 77c3091f-573a-4263-9490-8771546cfffa
+
+	/// Score moyen pondéré (weight * score)
+	measure 'Weighted Survey Score' =
+			DIVIDE(
+				SUMX('Fact Survey Answer', 'Fact Survey Answer'[Score] * 'Fact Survey Answer'[Weight]),
+				SUM('Fact Survey Answer'[Weight])
+			)
+		formatString: #,0.00
+		lineageTag: e5157f85-2238-4eec-aad8-4809312fa06d
+
+	/// Score moyen par question (relation inactive Question activée)
+	measure 'Avg Score by Question' =
+			CALCULATE(
+				AVERAGE('Fact Survey Answer'[Score]),
+				USERELATIONSHIP('Fact Survey Answer'[Question Key], 'Dim Question'[Question Key])
+			)
+		formatString: #,0.00
+		lineageTag: 8c92e935-821b-4f63-921c-893069021135
+
+	/// Nombre d'événements exécutés - Année en cours à date
+	measure '# Events Executed YTD' = TOTALYTD([# Events Executed], 'Dim Calendar'[Date])
+		formatString: #,0
+		lineageTag: 0d9cafc0-b8c4-4611-9025-b58409d8fc13
+
+	/// Nombre d'événements exécutés - Mois en cours à date
+	measure '# Events Executed MTD' = TOTALMTD([# Events Executed], 'Dim Calendar'[Date])
+		formatString: #,0
+		lineageTag: 59a64804-9dbb-4c5a-a559-5390acd8d3ff
+
+	/// Nombre d'événements exécutés - Même période année précédente
+	measure '# Events Executed LY' = CALCULATE([# Events Executed], SAMEPERIODLASTYEAR('Dim Calendar'[Date]))
+		formatString: #,0
+		lineageTag: 05058e6c-825e-4afe-bf65-a6ad4cded423
+
+	/// Variation Year-over-Year des événements exécutés
+	measure '% YoY Events Executed' = DIVIDE([# Events Executed] - [# Events Executed LY], [# Events Executed LY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0e4c2af4-a4e6-4bf7-bf01-0ebca7c92428
+
+	/// Moyenne mobile 28 jours des événements exécutés
+	measure '# Events Executed 28D MA' =
+			AVERAGEX(
+				DATESINPERIOD('Dim Calendar'[Date], LASTDATE('Dim Calendar'[Date]), -28, DAY),
+				[# Events Executed]
+			)
+		formatString: #,0.00
+		lineageTag: 93080254-9cee-48dd-b6f6-5870a4909176
+
+	partition _Measures = calculated
+		mode: import
+		source = ROW("_Placeholder", BLANK())
+
+	annotation PBI_Id = 9c0cfa1e8d7b4a9ab8c4ef2f1a2b3c4d

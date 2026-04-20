@@ -346,3 +346,41 @@ relationship AutoDetected_8f9eafea-0c91-45d3-a5b4-dfa445de19d4
 	fromColumn: 'Fact Planned Events'.'Event Id'
 	toColumn: 'Fact Events'.'Event Id'
 
+relationship 8e320669-3edb-4888-b914-2685ffb0fdc6
+	fromColumn: 'Fact Prospect Lifecycle'.'Prospect Key'
+	toColumn: 'Dim Prospect'.'Prospect Key'
+
+relationship 0345a5b8-f280-41fe-8466-0ba7052a7b24
+	fromColumn: 'Fact Area Management'.'Area Product Key'
+	toColumn: 'Dim Area Products'.'Area Product Key'
+
+relationship 33089d5e-538b-4196-80aa-2522c40ca605
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events'.'Event Date'
+	toColumn: 'Dim Calendar'.Date
+
+relationship 5c34e827-990a-4227-987c-d115c7ffab50
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Planned Events'.'Planned Event Date'
+	toColumn: 'Dim Calendar'.Date
+
+relationship ba840f91-f392-4c2b-a31e-6455444c8956
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Events Proposal'.'Event Proposal Date'
+	toColumn: 'Dim Calendar'.Date
+
+relationship 813d1b6a-f24f-4c52-901a-e5a3c53f11f0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Area Management'.'Area Management Date'
+	toColumn: 'Dim Calendar'.Date
+
+relationship c4b6a654-1bc9-4869-95f8-a545312a0d75
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Prospect Lifecycle'.'Lifecycle Date'
+	toColumn: 'Dim Calendar'.Date
+
+relationship 9e8d1154-6cdd-414c-a781-51db679289bd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Survey Answer'.'Answer Date'
+	toColumn: 'Dim Calendar'.Date
+

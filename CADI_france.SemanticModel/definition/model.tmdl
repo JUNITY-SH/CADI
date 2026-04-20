@@ -8,10 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Dim Area Products","Dim Area Type","Dim Calendar","Dim Customer","Dim Event Type","Dim Mercher","Dim Notes","Dim Point of Sales","Dim Prospect","Dim Prospect Sales Representative","Dim Sales Organization","Dim Sales Representative","Dim Question","Dim Sub Brand","Dim Survey","Fact Area Management","Fact Events Proposal","Fact Events","Fact Planned Events","Fact Prospect Lifecycle","Fact Survey Answer"]
+annotation PBI_QueryOrder = ["_Measures","Dim Area Products","Dim Area Type","Dim Calendar","Dim Customer","Dim Event Type","Dim Mercher","Dim Notes","Dim Point of Sales","Dim Prospect","Dim Prospect Sales Representative","Dim Sales Organization","Dim Sales Representative","Dim Question","Dim Sub Brand","Dim Survey","Fact Area Management","Fact Events Proposal","Fact Events","Fact Planned Events","Fact Prospect Lifecycle","Fact Survey Answer"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
+ref table _Measures
 ref table 'Dim Area Products'
 ref table DateTableTemplate_b160e464-a387-4d32-955b-7aed59a97ae2
 ref table LocalDateTable_3fde3347-3c3e-481a-84a8-3efd72c4d30b
